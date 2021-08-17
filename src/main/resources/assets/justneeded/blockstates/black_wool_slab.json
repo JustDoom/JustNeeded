@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "justneeded:block/black_wool_slab" },
+        "type=top": { "model": "justneeded:block/black_wool_slab_top" },
+        "type=double": { "model": "block/black_wool" }
+    }
+}

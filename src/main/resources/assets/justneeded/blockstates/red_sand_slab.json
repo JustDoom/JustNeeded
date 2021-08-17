@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "justneeded:block/red_sand_slab" },
+        "type=top": { "model": "justneeded:block/red_sand_slab_top" },
+        "type=double": { "model": "block/red_sand" }
+    }
+}
