@@ -12,42 +12,42 @@ public class BurnTimeEvent {
 
     //isItemEqual
     @SubscribeEvent
-    public static void paperBurn(FurnaceFuelBurnTimeEvent event){
-        if(event.getItemStack().getItem() == Items.PAPER){
+    public static void paperBurn(FurnaceFuelBurnTimeEvent event) {
+        if (event.getItemStack().getItem() == Items.PAPER) {
             event.setBurnTime(80);
-        } else if (event.getItemStack().getItem() == Items.BOOK){
+        } else if (event.getItemStack().getItem() == Items.BOOK) {
             event.setBurnTime(255);
-        } else if (event.getItemStack().getItem() == Items.WRITTEN_BOOK){
+        } else if (event.getItemStack().getItem() == Items.WRITTEN_BOOK) {
             event.setBurnTime(255);
-        } else if (event.getItemStack().getItem() == Items.WRITABLE_BOOK){
+        } else if (event.getItemStack().getItem() == Items.WRITABLE_BOOK) {
             event.setBurnTime(255);
-        }  else if (event.getItemStack().getItem() == Items.MAP){
+        } else if (event.getItemStack().getItem() == Items.MAP) {
             event.setBurnTime(80);
-        }  else if (event.getItemStack().getItem() == Items.FILLED_MAP){
+        } else if (event.getItemStack().getItem() == Items.FILLED_MAP) {
             event.setBurnTime(80);
-        } else if (event.getItemStack().getItem() == Items.HAY_BLOCK){
+        } else if (event.getItemStack().getItem() == Items.HAY_BLOCK) {
             event.setBurnTime(3745);
-        } else if (event.getItemStack().getItem() == Items.ACACIA_LEAVES){
+        } else if (event.getItemStack().getItem() == Items.ACACIA_LEAVES) {
             event.setBurnTime(85);
-        } else if (event.getItemStack().getItem() == Items.BIRCH_LEAVES){
+        } else if (event.getItemStack().getItem() == Items.BIRCH_LEAVES) {
             event.setBurnTime(85);
-        } else if (event.getItemStack().getItem() == Items.DARK_OAK_LEAVES){
+        } else if (event.getItemStack().getItem() == Items.DARK_OAK_LEAVES) {
             event.setBurnTime(85);
-        } else if (event.getItemStack().getItem() == Items.JUNGLE_LEAVES){
+        } else if (event.getItemStack().getItem() == Items.JUNGLE_LEAVES) {
             event.setBurnTime(85);
-        } else if (event.getItemStack().getItem() == Items.OAK_LEAVES){
+        } else if (event.getItemStack().getItem() == Items.OAK_LEAVES) {
             event.setBurnTime(85);
-        } else if (event.getItemStack().getItem() == Items.SPRUCE_LEAVES){
+        } else if (event.getItemStack().getItem() == Items.SPRUCE_LEAVES) {
             event.setBurnTime(85);
-        } else if (event.getItemStack().getItem() == Items.GRASS){
+        } else if (event.getItemStack().getItem() == Items.GRASS) {
             event.setBurnTime(90);
-        } else if (event.getItemStack().getItem() == Items.FERN){
+        } else if (event.getItemStack().getItem() == Items.FERN) {
             event.setBurnTime(90);
-        } else if (event.getItemStack().getItem() == Items.LARGE_FERN){
+        } else if (event.getItemStack().getItem() == Items.LARGE_FERN) {
             event.setBurnTime(90);
-        } else if (event.getItemStack().getItem() == Items.TALL_GRASS){
+        } else if (event.getItemStack().getItem() == Items.TALL_GRASS) {
             event.setBurnTime(90);
-        } else if (event.getItemStack().getItem() == Items.VINE){
+        } else if (event.getItemStack().getItem() == Items.VINE) {
             event.setBurnTime(90);
         }
     }

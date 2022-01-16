@@ -4,11 +4,13 @@ import com.justdoom.justneeded.JustNeeded;
 import com.justdoom.justneeded.blocks.BlockItemBase;
 import com.justdoom.justneeded.items.food.CookedEgg;
 import com.justdoom.justneeded.items.food.PumpkinSoup;
+import net.minecraft.core.Registry;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ItemInit {
 
@@ -16,6 +18,8 @@ public class ItemInit {
 
     public static void init(){
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+        ;
     }
 
     //Food Items

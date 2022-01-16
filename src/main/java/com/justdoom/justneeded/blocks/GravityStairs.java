@@ -25,16 +25,16 @@ public class GravityStairs extends StairBlock implements Fallable {
     }
 
     public void onPlace(BlockState p_53233_, Level p_53234_, BlockPos p_53235_, BlockState p_53236_, boolean p_53237_) {
-        p_53234_.getBlockTicks().scheduleTick(p_53235_, this, this.getDelayAfterPlace());
+        p_53234_.scheduleTick(p_53235_, this, this.getDelayAfterPlace());
     }
 
     public BlockState updateShape(BlockState p_53226_, Direction p_53227_, BlockState p_53228_, LevelAccessor p_53229_, BlockPos p_53230_, BlockPos p_53231_) {
-        p_53229_.getBlockTicks().scheduleTick(p_53230_, this, this.getDelayAfterPlace());
+        p_53229_.scheduleTick(p_53230_, this, this.getDelayAfterPlace());
         return super.updateShape(p_53226_, p_53227_, p_53228_, p_53229_, p_53230_, p_53231_);
     }
 
     public void tick(BlockState p_53216_, ServerLevel p_53217_, BlockPos p_53218_, Random p_53219_) {
-        if (isFree(p_53217_.getBlockState(p_53218_.below())) && p_53218_.getY() >= 0) {
+        if (isFree(p_53217_.getBlockState(p_53218_.below())) && p_53218_.getY() >= p_53217_.getMinBuildHeight()) {
             FallingBlockEntity fallingblockentity = new FallingBlockEntity(p_53217_, (double)p_53218_.getX() + 0.5D, (double)p_53218_.getY(), (double)p_53218_.getZ() + 0.5D, p_53217_.getBlockState(p_53218_));
             this.falling(fallingblockentity);
             p_53217_.addFreshEntity(fallingblockentity);

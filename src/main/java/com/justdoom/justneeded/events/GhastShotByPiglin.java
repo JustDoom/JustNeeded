@@ -18,13 +18,10 @@ import net.minecraftforge.fml.common.Mod;
 public class GhastShotByPiglin {
 
     @SubscribeEvent
-    public static void paperBurn(LivingDeathEvent event){
+    public static void paperBurn(LivingDeathEvent event) {
         Entity entity = event.getEntity();
-        System.out.println(entity.getName());
-        if(entity instanceof Ghast){
-            System.out.println(event.getSource().getDirectEntity());
-            System.out.println(event.getSource().getEntity());
-            if(event.getSource().getEntity() instanceof Piglin && event.getSource().getDirectEntity() instanceof Arrow){
+        if (entity instanceof Ghast) {
+            if (event.getSource().getEntity() instanceof Piglin && event.getSource().getDirectEntity() instanceof Arrow) {
                 Level world = event.getEntity().level;
                 ItemEntity item = new ItemEntity(world, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), new ItemStack(Items.MUSIC_DISC_PIGSTEP, 1));
                 world.addFreshEntity(item);
