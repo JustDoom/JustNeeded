@@ -1,10 +1,10 @@
-package com.justdoom.justneeded.init;
+package com.imjustdoom.justneeded.init;
 
-import com.justdoom.justneeded.JustNeeded;
-import com.justdoom.justneeded.blocks.GravitySlabs;
-import com.justdoom.justneeded.blocks.GravityStairs;
-import com.justdoom.justneeded.blocks.WoolSlab;
-import com.justdoom.justneeded.blocks.WoolStairs;
+import com.imjustdoom.justneeded.JustNeeded;
+import com.imjustdoom.justneeded.blocks.GravitySlabs;
+import com.imjustdoom.justneeded.blocks.GravityStairs;
+import com.imjustdoom.justneeded.blocks.WoolSlab;
+import com.imjustdoom.justneeded.blocks.WoolStairs;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;

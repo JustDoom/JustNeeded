@@ -1,12 +1,10 @@
-package com.justdoom.justneeded.init;
+package com.imjustdoom.justneeded.init;
 
-import com.justdoom.justneeded.JustNeeded;
-import com.justdoom.justneeded.blocks.BlockItemBase;
-import com.justdoom.justneeded.items.food.CookedEgg;
-import com.justdoom.justneeded.items.food.PumpkinSoup;
-import net.minecraft.core.Registry;
+import com.imjustdoom.justneeded.JustNeeded;
+import com.imjustdoom.justneeded.blocks.BlockItemBase;
+import com.imjustdoom.justneeded.items.food.CookedEgg;
+import com.imjustdoom.justneeded.items.food.PumpkinSoup;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,8 +16,6 @@ public class ItemInit {
 
     public static void init(){
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-
-        ;
     }
 
     //Food Items

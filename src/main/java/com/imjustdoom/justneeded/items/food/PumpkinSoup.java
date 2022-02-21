@@ -1,6 +1,6 @@
-package com.justdoom.justneeded.items.food;
+package com.imjustdoom.justneeded.items.food;
 
-import com.justdoom.justneeded.JustNeeded;
+import com.imjustdoom.justneeded.JustNeeded;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;

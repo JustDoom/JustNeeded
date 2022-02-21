@@ -1,7 +1,7 @@
-package com.justdoom.justneeded;
+package com.imjustdoom.justneeded;
 
-import com.justdoom.justneeded.init.BlockInit;
-import com.justdoom.justneeded.init.ItemInit;
+import com.imjustdoom.justneeded.init.BlockInit;
+import com.imjustdoom.justneeded.init.ItemInit;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,7 +14,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class JustNeeded
 {
     public static final String MOD_ID = "justneeded";
-    //private static final Logger LOGGER = LogManager.getLogger();
 
     public JustNeeded() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);

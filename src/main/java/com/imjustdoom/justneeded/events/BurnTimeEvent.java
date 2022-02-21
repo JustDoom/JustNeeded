@@ -1,13 +1,13 @@
-package com.justdoom.justneeded.events;
+package com.imjustdoom.justneeded.events;
 
-import com.justdoom.justneeded.JustNeeded;
+import com.imjustdoom.justneeded.JustNeeded;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = JustNeeded.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = JustNeeded.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class BurnTimeEvent {
 
     //isItemEqual

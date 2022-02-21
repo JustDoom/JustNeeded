@@ -1,6 +1,6 @@
-package com.justdoom.justneeded.blocks;
+package com.imjustdoom.justneeded.blocks;
 
-import com.justdoom.justneeded.JustNeeded;
+import com.imjustdoom.justneeded.JustNeeded;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

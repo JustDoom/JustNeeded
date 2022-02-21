@@ -1,21 +1,8 @@
-package com.justdoom.justneeded.events;
+package com.imjustdoom.justneeded.events;
 
-import com.justdoom.justneeded.JustNeeded;
+import com.imjustdoom.justneeded.JustNeeded;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.event.entity.item.ItemExpireEvent;
-import net.minecraftforge.event.entity.item.ItemTossEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.apache.logging.log4j.LogManager;
-
-import java.lang.management.ManagementFactory;
-import java.lang.management.OperatingSystemMXBean;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Random;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.logging.Logger;
 
 @Mod.EventBusSubscriber(modid = JustNeeded.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class LavaCook {

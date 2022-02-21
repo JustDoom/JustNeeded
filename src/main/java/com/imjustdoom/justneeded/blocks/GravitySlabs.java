@@ -1,4 +1,4 @@
-package com.justdoom.justneeded.blocks;
+package com.imjustdoom.justneeded.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -10,18 +10,17 @@ import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Fallable;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
-public class GravityStairs extends StairBlock implements Fallable {
-
-    public GravityStairs(Supplier<BlockState> state, Properties properties) {
-        super(state, properties);
+public class GravitySlabs extends SlabBlock implements Fallable {
+    public GravitySlabs(BlockBehaviour.Properties p_53205_) {
+        super(p_53205_);
     }
 
     public void onPlace(BlockState p_53233_, Level p_53234_, BlockPos p_53235_, BlockState p_53236_, boolean p_53237_) {

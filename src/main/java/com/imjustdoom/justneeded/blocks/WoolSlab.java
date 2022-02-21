@@ -1,4 +1,4 @@
-package com.justdoom.justneeded.blocks;
+package com.imjustdoom.justneeded.blocks;
 
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;

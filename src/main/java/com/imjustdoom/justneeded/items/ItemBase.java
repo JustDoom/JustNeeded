@@ -1,6 +1,6 @@
-package com.justdoom.justneeded.items;
+package com.imjustdoom.justneeded.items;
 
-import com.justdoom.justneeded.JustNeeded;
+import com.imjustdoom.justneeded.JustNeeded;
 import net.minecraft.world.item.Item;
 
 public class ItemBase extends Item {

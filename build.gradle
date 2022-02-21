@@ -14,7 +14,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.18.1-1.0.0'
-group = 'com.justdoom.justneeded' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'com.imjustdoom.justneeded' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'justneeded'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
