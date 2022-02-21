@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:spider_eye"
+    }
+  },
+  "result": {
+    "item": "justneeded:spider_eye_block_item",
+    "count": 1
+  }
+}

@@ -219,4 +219,11 @@ public class BlockInit {
             .strength(0.8f)
             .sound(SoundType.WOOL)
     ));
+
+
+    // Blocks
+    public static final RegistryObject<Block> SPIDER_EYE_BLOCK = BLOCKS.register("spider_eye_block", () -> new Block(Block.Properties.of(Material.CLAY, MaterialColor.COLOR_PURPLE)
+            .strength(0.4f)
+            .sound(SoundType.SLIME_BLOCK)
+    ));
 }

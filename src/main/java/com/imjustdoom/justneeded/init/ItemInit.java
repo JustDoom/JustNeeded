@@ -77,4 +77,7 @@ public class ItemInit {
     public static final RegistryObject<Item> GREEN_WOOL_SLAB_ITEM = ITEMS.register("green_wool_slab_item", () -> new BlockItemBase(BlockInit.GREEN_WOOL_SLAB.get()));
     public static final RegistryObject<Item> RED_WOOL_SLAB_ITEM = ITEMS.register("red_wool_slab_item", () -> new BlockItemBase(BlockInit.RED_WOOL_SLAB.get()));
     public static final RegistryObject<Item> BLACK_WOOL_SLAB_ITEM = ITEMS.register("black_wool_slab_item", () -> new BlockItemBase(BlockInit.BLACK_WOOL_SLAB.get()));
+
+    //Blocks
+    public static final RegistryObject<Item> SPIDER_EYE_BLOCK_ITEM = ITEMS.register("spider_eye_block_item", () -> new BlockItemBase(BlockInit.SPIDER_EYE_BLOCK.get()));
 }
