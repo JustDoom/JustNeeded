@@ -1,4 +1,4 @@
-package com.imjustdoom.justneeded.events;
+package com.imjustdoom.justneeded.listener;
 
 import com.imjustdoom.justneeded.JustNeeded;
 import net.minecraft.world.InteractionHand;
@@ -12,7 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = JustNeeded.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
-public class ZombieSpawnEvent {
+public class ZombieSpawnListener {
 
     @SubscribeEvent
     public static void zombieSpawn(LivingSpawnEvent event){

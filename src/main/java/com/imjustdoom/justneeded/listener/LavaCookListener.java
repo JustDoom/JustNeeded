@@ -1,11 +1,11 @@
-package com.imjustdoom.justneeded.events;
+package com.imjustdoom.justneeded.listener;
 
 import com.imjustdoom.justneeded.JustNeeded;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = JustNeeded.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
-public class LavaCook {
+public class LavaCookListener {
 
     /**private OperatingSystemMXBean osBean = ManagementFactory.getPlatformMXBean(OperatingSystemMXBean.class);
     Random random = new Random();
