@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "justneeded:stick_bundle"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stick",
+    "count": 9
+  }
+}

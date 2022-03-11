@@ -10,12 +10,12 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = "justneeded", bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class BlockBreakListener {
     @SubscribeEvent
-    static void handleBreakSpeed(PlayerEvent.BreakSpeed e) {
-        if ((e.getState().getBlock() instanceof WoolStairs
-                || e.getState().getBlock() instanceof WoolSlab)
-                && e.getPlayer().getMainHandItem().is(Tags.Items.SHEARS)) {
+    static void handleBreakSpeed(PlayerEvent.BreakSpeed event) {
+        if ((event.getState().getBlock() instanceof WoolStairs
+                || event.getState().getBlock() instanceof WoolSlab)
+                && event.getPlayer().getMainHandItem().is(Tags.Items.SHEARS)) {
 
-            e.setNewSpeed(e.getOriginalSpeed() * 5.0F);
+            event.setNewSpeed(event.getOriginalSpeed() * 5.0F);
         }
     }
 }

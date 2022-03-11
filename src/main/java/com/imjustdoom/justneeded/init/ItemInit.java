@@ -2,9 +2,11 @@ package com.imjustdoom.justneeded.init;
 
 import com.imjustdoom.justneeded.JustNeeded;
 import com.imjustdoom.justneeded.blocks.BlockItemBase;
+import com.imjustdoom.justneeded.items.ItemBase;
 import com.imjustdoom.justneeded.items.food.CookedEgg;
 import com.imjustdoom.justneeded.items.food.PumpkinSoup;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,6 +23,10 @@ public class ItemInit {
     //Food Items
     public static final RegistryObject<CookedEgg> COOKED_EGG = ITEMS.register("cooked_egg", CookedEgg::new);
     public static final RegistryObject<PumpkinSoup> PUMPKIN_SOUP = ITEMS.register("pumpkin_soup", PumpkinSoup::new);
+
+    // Items
+    public static final RegistryObject<Item> STICK_BUNDLE = ITEMS.register("stick_bundle", ItemBase::new);
+    public static final RegistryObject<Item> BLAZE_ROD_BUNDLE = ITEMS.register("blaze_rod_bundle", ItemBase::new);
 
     //Stair items
     public static final RegistryObject<Item> DIRT_STAIRS_ITEM = ITEMS.register("dirt_stairs_item", () -> new BlockItemBase(BlockInit.DIRT_STAIRS.get()));

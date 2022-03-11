@@ -2,6 +2,9 @@
   "itemGroup.justneededtab": "Just Needed",
 
   "item.justneeded.cooked_egg": "Cooked Egg",
+  "item.justneeded.pumpkin_soup": "Pumpkin Soup",
+  "item.justneeded.stick_bundle": "Stick Bundle",
+  "item.justneeded.blaze_rod_bundle": "Blaze Rod Bundle",
 
   "block.justneeded.dirt_stairs": "Dirt Stairs",
   "block.justneeded.sand_stairs": "Sand Stairs",
@@ -49,7 +52,5 @@
   "block.justneeded.glowstone_slab": "Glowstone Slab",
   "block.justneeded.sand_slab": "Sand Slab",
   "block.justneeded.red_sand_slab": "Red Sand Slab",
-  "block.justneeded.gravel_slab": "Gravel Slab",
-
-  "item.justneeded.pumpkin_soup": "Pumpkin Soup"
+  "block.justneeded.gravel_slab": "Gravel Slab"
 }

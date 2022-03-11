@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.Mod;
 public class GhastShotByPiglinListener {
 
     @SubscribeEvent
-    public static void paperBurn(LivingDeathEvent event) {
+    public static void ghastDeath(LivingDeathEvent event) {
         Entity entity = event.getEntity();
         if (!(entity instanceof Ghast)
                 || !(event.getSource().getEntity() instanceof Piglin)
