@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "justneeded:block/light_blue_wool_slab" },
-        "type=top": { "model": "justneeded:block/light_blue_wool_slab_top" },
-        "type=double": { "model": "block/light_blue_wool" }
-    }
-}

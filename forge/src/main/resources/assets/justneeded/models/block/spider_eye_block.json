@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "justneeded:blocks/spider_eye_block"
-  }
-}

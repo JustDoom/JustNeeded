@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "justneeded:block/yellow_wool_slab" },
-        "type=top": { "model": "justneeded:block/yellow_wool_slab_top" },
-        "type=double": { "model": "block/yellow_wool" }
-    }
-}

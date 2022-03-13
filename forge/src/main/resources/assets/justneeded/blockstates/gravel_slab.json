@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "justneeded:block/gravel_slab" },
-        "type=top": { "model": "justneeded:block/gravel_slab_top" },
-        "type=double": { "model": "block/gravel" }
-    }
-}
