@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:spider_eye"
+      "item": "minecraft:sugar_cane"
     }
   },
   "result": {
-    "item": "justneeded:spider_eye_block",
+    "item": "justneeded:sugar_cane_block",
     "count": 1
   }
 }

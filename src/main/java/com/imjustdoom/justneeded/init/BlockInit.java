@@ -33,6 +33,10 @@ public class BlockInit {
             .sound(SoundType.GLASS)
             .lightLevel(value -> 15)
     ));
+    public static final RegistryObject<Block> SUGAR_CANE_STAIRS = BLOCKS.register("sugar_cane_stairs", () -> new StairBlock(() -> BlockInit.SUGAR_CANE_BLOCK.get().defaultBlockState(), Block.Properties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN)
+            .strength(2.0f, 3.0f)
+            .sound(SoundType.WOOD)
+    ));
 
 
 
@@ -46,6 +50,10 @@ public class BlockInit {
             .strength(0.3f)
             .sound(SoundType.GLASS)
             .lightLevel(value -> 15)
+    ));
+    public static final RegistryObject<Block> SUGAR_CANE_SLAB = BLOCKS.register("sugar_cane_slab", () -> new SlabBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN)
+            .strength(2.0f, 3.0f)
+            .sound(SoundType.WOOD)
     ));
 
 
@@ -225,5 +233,9 @@ public class BlockInit {
     public static final RegistryObject<Block> SPIDER_EYE_BLOCK = BLOCKS.register("spider_eye_block", () -> new Block(Block.Properties.of(Material.CLAY, MaterialColor.COLOR_PURPLE)
             .strength(0.4f)
             .sound(SoundType.SLIME_BLOCK)
+    ));
+    public static final RegistryObject<Block> SUGAR_CANE_BLOCK = BLOCKS.register("sugar_cane_block", () -> new Block(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN)
+            .strength(2.0F, 3.0F)
+            .sound(SoundType.WOOD)
     ));
 }

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "justneeded:block/sugar_cane_slab" },
+        "type=top": { "model": "justneeded:block/sugar_cane_slab_top" },
+        "type=double": { "model": "justneeded:block/sugar_cane_block" }
+    }
+}

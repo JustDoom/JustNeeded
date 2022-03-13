@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "###",
     "###"
   ],
   "key": {
     "#": {
-      "item": "minecraft:spider_eye"
+      "item": "justneeded:sugar_cane_block"
     }
   },
   "result": {
-    "item": "justneeded:spider_eye_block",
-    "count": 1
+    "item": "justneeded:sugar_cane_slab",
+    "count": 6
   }
 }

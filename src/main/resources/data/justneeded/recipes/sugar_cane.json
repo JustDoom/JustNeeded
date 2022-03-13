@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "justneeded:spider_eye_block"
+      "item": "justneeded:sugar_cane_block"
     }
   ],
   "result": {
-    "item": "minecraft:spider_eye",
+    "item": "minecraft:sugar_cane",
     "count": 9
   }
 }

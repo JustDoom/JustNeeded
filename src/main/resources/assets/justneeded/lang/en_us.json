@@ -7,6 +7,7 @@
   "item.justneeded.blaze_rod_bundle": "Blaze Rod Bundle",
 
   "block.justneeded.dirt_stairs": "Dirt Stairs",
+  "block.justneeded.sugar_cane_stairs": "Sugar Cane Stairs",
   "block.justneeded.sand_stairs": "Sand Stairs",
   "block.justneeded.glowstone_stairs": "Glowstone Stairs",
   "block.justneeded.gravel_stairs": "Gravel Stairs",
@@ -47,8 +48,10 @@
   "block.justneeded.yellow_wool_slab": "Yellow Wool Slab",
 
   "block.justneeded.spider_eye_block": "Spider Eye Block",
+  "block.justneeded.sugar_cane_block": "Sugar Cane Block",
 
   "block.justneeded.dirt_slab": "Dirt Slab",
+  "block.justneeded.sugar_cane_slab": "Sugar Cane Slab",
   "block.justneeded.glowstone_slab": "Glowstone Slab",
   "block.justneeded.sand_slab": "Sand Slab",
   "block.justneeded.red_sand_slab": "Red Sand Slab",

@@ -31,6 +31,7 @@ public class ItemInit {
     //Stair items
     public static final RegistryObject<Item> DIRT_STAIRS_ITEM = ITEMS.register("dirt_stairs_item", () -> new BlockItemBase(BlockInit.DIRT_STAIRS.get()));
     public static final RegistryObject<Item> GLOWSTONE_STAIRS_ITEM = ITEMS.register("glowstone_stairs_item", () -> new BlockItemBase(BlockInit.GLOWSTONE_STAIRS.get()));
+    public static final RegistryObject<Item> SUGAR_CANE_STAIRS_ITEM = ITEMS.register("sugar_cane_stairs", () -> new BlockItemBase(BlockInit.SUGAR_CANE_STAIRS.get()));
 
 
     //Gravity Affected Stairs
@@ -41,6 +42,7 @@ public class ItemInit {
     //Slab Items
     public static final RegistryObject<Item> DIRT_SLAB_ITEM = ITEMS.register("dirt_slab_item", () -> new BlockItemBase(BlockInit.DIRT_SLAB.get()));
     public static final RegistryObject<Item> GLOWSTONE_SLAB_ITEM = ITEMS.register("glowstone_slab_item", () -> new BlockItemBase(BlockInit.GLOWSTONE_SLAB.get()));
+    public static final RegistryObject<Item> SUGAR_CANE_SLAB_ITEM = ITEMS.register("sugar_cane_slab", () -> new BlockItemBase(BlockInit.SUGAR_CANE_SLAB.get()));
 
     //Gravity Affected Slabs
     public static final RegistryObject<Item> SAND_SLAB_ITEM = ITEMS.register("sand_slab_item", () -> new BlockItemBase(BlockInit.SAND_SLAB.get()));
@@ -85,5 +87,6 @@ public class ItemInit {
     public static final RegistryObject<Item> BLACK_WOOL_SLAB_ITEM = ITEMS.register("black_wool_slab_item", () -> new BlockItemBase(BlockInit.BLACK_WOOL_SLAB.get()));
 
     //Blocks
-    public static final RegistryObject<Item> SPIDER_EYE_BLOCK_ITEM = ITEMS.register("spider_eye_block_item", () -> new BlockItemBase(BlockInit.SPIDER_EYE_BLOCK.get()));
+    public static final RegistryObject<Item> SPIDER_EYE_BLOCK_ITEM = ITEMS.register("spider_eye_block", () -> new BlockItemBase(BlockInit.SPIDER_EYE_BLOCK.get()));
+    public static final RegistryObject<Item> SUGAR_CANE_BLOCK_ITEM = ITEMS.register("sugar_cane_block", () -> new BlockItemBase(BlockInit.SUGAR_CANE_BLOCK.get()));
 }
