@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "justneeded:blocks/sugar_cane_block",
+        "top": "justneeded:blocks/sugar_cane_block",
+        "side": "justneeded:blocks/sugar_cane_block"
+    }
+}

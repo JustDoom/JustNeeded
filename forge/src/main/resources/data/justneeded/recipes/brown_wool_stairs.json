@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:brown_wool"
+    }
+  },
+  "result": {
+    "item": "justneeded:brown_wool_stairs_item",
+    "count": 4
+  },
+  "group": "wool_stairs_recipe"
+}

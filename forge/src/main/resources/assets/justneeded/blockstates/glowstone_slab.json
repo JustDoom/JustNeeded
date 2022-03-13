@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "justneeded:block/glowstone_slab" },
+        "type=top": { "model": "justneeded:block/glowstone_slab_top" },
+        "type=double": { "model": "block/glowstone" }
+    }
+}

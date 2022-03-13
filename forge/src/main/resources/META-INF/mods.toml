@@ -1,0 +1,27 @@
+modLoader="javafml" #mandatory
+loaderVersion="[39,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+issueTrackerURL="https://github.com/JustDoom/Just-Needed-Forge/issues"
+[[mods]] #mandatory
+modId="justneeded" #mandatory
+version="1.18.1-1.0.1" #mandatory
+displayName="Just Needed" #mandatory
+logoFile="logo.png" #optional
+#credits="Thanks for this example mod goes to Java" #optional
+authors="JustDoom" #optional
+description='''
+This mod adds items, blocks, recipes that are just needed to be in minecraft!
+'''
+[[dependencies.justneeded]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[39,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+# Here's another dependency
+[[dependencies.justneeded]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.1,1.19)"
+    ordering="NONE"
+    side="BOTH"

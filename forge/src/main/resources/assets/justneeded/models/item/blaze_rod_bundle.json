@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "justneeded:items/blaze_rod_bundle"
+  }
+}
