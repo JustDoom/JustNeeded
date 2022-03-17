@@ -24,7 +24,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "justneeded:gravel_slab_item"
+          "name": "justneeded:gravel_slab"
         }
       ]
     }

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "justneeded:glowstone_stairs_item"
+          "name": "justneeded:glowstone_stairs"
         }
       ],
       "conditions": [

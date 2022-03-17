@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "justneeded:light_gray_wool_stairs_item"
+          "name": "justneeded:light_gray_wool_stairs"
         }
       ],
       "conditions": [

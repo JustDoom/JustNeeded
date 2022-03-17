@@ -1,9 +1,8 @@
 package com.imjustdoom.justneeded.blocks;
 
 import com.imjustdoom.justneeded.JustNeeded;
+import com.imjustdoom.justneeded.blocks.custom.*;
 import com.imjustdoom.justneeded.blocks.custom.ModSlabBlock;
-import com.imjustdoom.justneeded.blocks.custom.ModSlabBlock;
-import com.imjustdoom.justneeded.blocks.custom.ModStairsBlock;
 import com.imjustdoom.justneeded.items.JustNeededGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -29,6 +28,15 @@ public class BlockInit {
     // Stairs
     public static final Block DIRT_STAIRS = registerBlock("dirt_stairs",
             new ModStairsBlock(Blocks.DIRT.getDefaultState(),
+                    FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).strength(0.5f)), JustNeededGroup.JUST_NEEDED);
+    public static final Block SAND_STAIRS = registerBlock("sand_stairs",
+            new ModGravityStairsBlock(Blocks.SAND.getDefaultState(),
+                    FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.SAND).strength(0.5f)), JustNeededGroup.JUST_NEEDED);
+    public static final Block RED_SAND_STAIRS = registerBlock("red_sand_stairs",
+            new ModGravityStairsBlock(Blocks.SAND.getDefaultState(),
+                    FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.SAND).strength(0.5f)), JustNeededGroup.JUST_NEEDED);
+    public static final Block GRAVEL_STAIRS = registerBlock("gravel_stairs",
+            new ModGravityStairsBlock(Blocks.SAND.getDefaultState(),
                     FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).strength(0.5f)), JustNeededGroup.JUST_NEEDED);
     public static final Block GLOWSTONE_STAIRS = registerBlock("glowstone_stairs",
             new ModStairsBlock(Blocks.GLOWSTONE.getDefaultState(),
@@ -89,11 +97,23 @@ public class BlockInit {
 
     // Slab
     public static final Block DIRT_SLAB = registerBlock("dirt_slab",
-            new ModSlabBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).strength(0.5f)), JustNeededGroup.JUST_NEEDED);
+            new ModSlabBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).strength(0.5f)),
+            JustNeededGroup.JUST_NEEDED);
+    public static final Block SAND_SLAB = registerBlock("sand_slab",
+            new ModGravitySlabBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.SAND).strength(0.5f)),
+            JustNeededGroup.JUST_NEEDED);
+    public static final Block RED_SAND_SLAB = registerBlock("red_sand_slab",
+            new ModGravitySlabBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.SAND).strength(0.5f)),
+            JustNeededGroup.JUST_NEEDED);
+    public static final Block GRAVEL_SLAB = registerBlock("gravel_slab",
+            new ModGravitySlabBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.GRAVEL).strength(0.5f)),
+            JustNeededGroup.JUST_NEEDED);
     public static final Block GLOWSTONE_SLAB = registerBlock("glowstone_slab",
-            new ModSlabBlock(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).strength(0.3f).lightLevel(15)), JustNeededGroup.JUST_NEEDED);
+            new ModSlabBlock(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).strength(0.3f).lightLevel(15)),
+            JustNeededGroup.JUST_NEEDED);
     public static final Block SUGAR_CANE_SLAB = registerBlock("sugar_cane_slab",
-            new ModSlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f)), JustNeededGroup.JUST_NEEDED);
+            new ModSlabBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f)),
+            JustNeededGroup.JUST_NEEDED);
 
     // Wool slabs
     public static final Block WHITE_WOOL_SLAB = registerBlock("white_wool_slab",

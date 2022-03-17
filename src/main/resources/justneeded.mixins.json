@@ -5,8 +5,9 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
-  "client": [
-    "ExampleMixin"
+  "server": [
+    "GhastDeathMixin",
+    "CropTrampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -4,13 +4,12 @@
   "version": "${version}",
 
   "name": "Just Needed",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "This mod adds items, blocks, recipes that are just needed to be in minecraft!",
   "authors": [
-    "Me!"
+    "JustDoom"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/JustDoom/JustNeeded"
   },
 
   "license": "CC0-1.0",

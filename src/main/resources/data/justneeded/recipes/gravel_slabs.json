@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#  ",
-    "## ",
     "###"
   ],
   "key": {
     "#": {
-      "item": "minecraft:sand"
+      "item": "minecraft:gravel"
     }
   },
   "result": {
-    "item": "justneeded:sand_stairs_item",
-    "count": 4
+    "item": "justneeded:gravel_slab",
+    "count": 6
   }
 }
