@@ -31,7 +31,9 @@ public class CropTrampleListener {
         }
 
         for (ItemStack itemStack : entity.getArmorSlots()) {
-            if (!(itemStack.getItem() instanceof ArmorItem armorItem) || armorItem.getSlot() != EquipmentSlot.FEET) continue;
+            if (!(itemStack.getItem() instanceof ArmorItem armorItem)
+                    || armorItem.getSlot() != EquipmentSlot.FEET
+                    || EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FALL_PROTECTION, itemStack) == 0) continue;
 
             event.setCanceled(true);
         }
