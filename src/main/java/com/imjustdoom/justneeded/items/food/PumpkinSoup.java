@@ -17,8 +17,7 @@ public class PumpkinSoup extends Item {
                 .food(new FoodProperties.Builder()
                         .nutrition(6)
                         .saturationMod(0.6f)
-                        .build()
-                )
+                        .build())
         );
     }
 

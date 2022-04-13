@@ -12,8 +12,7 @@ public class CookedEgg extends Item {
                 .food(new FoodProperties.Builder()
                         .nutrition(4)
                         .saturationMod(5)
-                        .build()
-                )
+                        .build())
         );
     }
 }
