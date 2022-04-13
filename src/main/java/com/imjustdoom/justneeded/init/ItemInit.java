@@ -29,7 +29,7 @@ public class ItemInit {
     public static final RegistryObject<Item> BLAZE_ROD_BUNDLE = ITEMS.register("blaze_rod_bundle", ItemBase::new);
 
     //Stair items
-    public static final RegistryObject<Item> DIRT_STAIRS_ITEM = ITEMS.register("dirt_stairs_item", () -> new BlockItemBase(BlockInit.DIRT_STAIRS.get()));
+    public static final RegistryObject<Item> DIRT_STAIRS_ITEM = ITEMS.register("dirt_stairs", () -> new BlockItemBase(BlockInit.DIRT_STAIRS.get()));
     public static final RegistryObject<Item> GLOWSTONE_STAIRS_ITEM = ITEMS.register("glowstone_stairs_item", () -> new BlockItemBase(BlockInit.GLOWSTONE_STAIRS.get()));
     public static final RegistryObject<Item> SUGAR_CANE_STAIRS_ITEM = ITEMS.register("sugar_cane_stairs", () -> new BlockItemBase(BlockInit.SUGAR_CANE_STAIRS.get()));
 

@@ -1,5 +1,6 @@
 package com.imjustdoom.justneeded.listener;
 
+import com.imjustdoom.justneeded.JustNeeded;
 import com.imjustdoom.justneeded.blocks.WoolSlab;
 import com.imjustdoom.justneeded.blocks.WoolStairs;
 import net.minecraft.world.entity.Entity;
@@ -16,7 +17,7 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = "justneeded", bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = JustNeeded.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class CropTrampleListener {
 
     //TODO: test

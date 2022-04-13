@@ -2,10 +2,17 @@ package com.imjustdoom.justneeded.listener;
 
 import com.imjustdoom.justneeded.JustNeeded;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.entity.item.ItemExpireEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = JustNeeded.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class LavaCookListener {
+
+    @SubscribeEvent
+    public void cook(ItemExpireEvent event) {
+        System.out.println("BURNDED");
+    }
 
     /**private OperatingSystemMXBean osBean = ManagementFactory.getPlatformMXBean(OperatingSystemMXBean.class);
     Random random = new Random();

@@ -1,5 +1,6 @@
 package com.imjustdoom.justneeded.listener;
 
+import com.imjustdoom.justneeded.JustNeeded;
 import com.imjustdoom.justneeded.blocks.WoolSlab;
 import com.imjustdoom.justneeded.blocks.WoolStairs;
 import net.minecraftforge.common.Tags;
@@ -7,7 +8,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = "justneeded", bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = JustNeeded.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class BlockBreakListener {
     @SubscribeEvent
     static void handleBreakSpeed(PlayerEvent.BreakSpeed event) {
