@@ -26,9 +26,11 @@ public class CropTrampleListener {
     static void cropTrample(BlockEvent.FarmlandTrampleEvent event) {
         Entity entity = event.getEntity();
 
-        if(((Player) entity).isCreative()) {
-            event.setCanceled(true);
-            return;
+        if(entity instanceof Player) {
+            if (((Player) entity).isCreative()) {
+                event.setCanceled(true);
+                return;
+            }
         }
 
         for (ItemStack itemStack : entity.getArmorSlots()) {
