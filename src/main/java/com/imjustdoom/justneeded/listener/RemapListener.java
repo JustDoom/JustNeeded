@@ -2,19 +2,20 @@ package com.imjustdoom.justneeded.listener;
 
 import com.imjustdoom.justneeded.JustNeeded;
 import com.imjustdoom.justneeded.init.BlockInit;
-import com.imjustdoom.justneeded.init.ItemInit;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.MissingMappingsEvent;
 
 @Mod.EventBusSubscriber(modid = JustNeeded.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class RemapListener {
 
     @SubscribeEvent
-    public static void missingItemMappings(RegistryEvent.MissingMappings<Item> event) {
-        for (RegistryEvent.MissingMappings.Mapping<Item> entry : event.getAllMappings()) {
-            switch (entry.key.toString()) {
+    public static void missingItemMappings(MissingMappingsEvent event) {
+
+        for (MissingMappingsEvent.Mapping<Item> entry : event.getAllMappings(ForgeRegistries.Keys.ITEMS)) {
+            switch (entry.getKey().toString()) {
                 case JustNeeded.MOD_ID + ":dirt_stairs_item" -> entry.remap(BlockInit.DIRT_STAIRS.get().asItem());
                 case JustNeeded.MOD_ID + ":glowstone_stairs_item" -> entry.remap(BlockInit.GLOWSTONE_STAIRS.get().asItem());
                 case JustNeeded.MOD_ID + ":sugar_cane_stairs_item" -> entry.remap(BlockInit.SUGAR_CANE_STAIRS.get().asItem());
