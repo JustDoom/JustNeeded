@@ -23,7 +23,9 @@ public class BlockInit {
 
     public static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, JustNeeded.MOD_ID);
 
-    //Stairs
+    // | --------------------------- |
+    // | Stairs                      |
+    // | --------------------------- |
     public static final RegistryObject<Block> DIRT_STAIRS = registerBlock("dirt_stairs",
             () -> new StairBlock(Blocks.DIRT::defaultBlockState, Block.Properties.of(Material.DIRT, MaterialColor.DIRT)
             .strength(0.5f)
@@ -44,8 +46,18 @@ public class BlockInit {
             JustNeeded.JustNeededTab
     );
 
+    public static final RegistryObject<Block> SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
+            () -> new StairBlock(() -> Blocks.SMOOTH_STONE.defaultBlockState(), Block.Properties.of(Material.STONE, MaterialColor.STONE)
+                    .strength(2.0f, 6.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)),
+            JustNeeded.JustNeededTab
+    );
 
-    //Slabs
+
+    // | --------------------------- |
+    // | Slabs                       |
+    // | --------------------------- |
     public static final RegistryObject<Block> DIRT_SLAB = registerBlock("dirt_slab",
             () -> new SlabBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT)
             .strength(0.5f, 0.5f)
@@ -66,8 +78,9 @@ public class BlockInit {
             JustNeeded.JustNeededTab
     );
 
-
-    //Gravity Affected Stairs
+    // | --------------------------- |
+    // | Gravity Affected Stairs     |
+    // | --------------------------- |
     public static final RegistryObject<Block> SAND_STAIRS = registerBlock("sand_stairs",
             () -> new GravityStairs(Blocks.SAND::defaultBlockState, Block.Properties.of(Material.SAND, MaterialColor.SAND)
             .strength(0.5f)
@@ -88,7 +101,9 @@ public class BlockInit {
     );
 
 
-    //Gravity Affected Slabs
+    // | --------------------------- |
+    // | Gravity Affected Slabs      |
+    // | --------------------------- |
     public static final RegistryObject<Block> SAND_SLAB = registerBlock("sand_slab",
             () -> new GravitySlabs(Block.Properties.of(Material.SAND, MaterialColor.SAND)
             .strength(0.5f)
@@ -109,7 +124,9 @@ public class BlockInit {
     );
 
 
-    //Wool Stairs
+    // | --------------------------- |
+    // | Wool Stairs                 |
+    // | --------------------------- |
     public static final RegistryObject<Block> WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
             () -> new WoolStairs(Blocks.WHITE_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.SNOW)
             .strength(0.8f)
@@ -208,7 +225,9 @@ public class BlockInit {
     );
 
 
-    //Wool Slabs
+    // | --------------------------- |
+    // | Wool Slabs                  |
+    // | --------------------------- |
     public static final RegistryObject<Block> WHITE_WOOL_SLAB = registerBlock("white_wool_slab",
             () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.SNOW)
             .strength(0.8f)
@@ -306,8 +325,9 @@ public class BlockInit {
             JustNeeded.JustNeededTab
     );
 
-
-    // Blocks
+    // | --------------------------- |
+    // | Blocks                      |
+    // | --------------------------- |
     public static final RegistryObject<Block> SPIDER_EYE_BLOCK = registerBlock("spider_eye_block",
             () -> new Block(Block.Properties.of(Material.CLAY, MaterialColor.COLOR_PURPLE)
             .strength(0.4f)
