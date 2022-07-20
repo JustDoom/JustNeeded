@@ -14,7 +14,7 @@ public class BlockBreakListener {
     static void handleBreakSpeed(PlayerEvent.BreakSpeed event) {
         if ((event.getState().getBlock() instanceof WoolStairs
                 || event.getState().getBlock() instanceof WoolSlab)
-                && event.getPlayer().getMainHandItem().is(Tags.Items.SHEARS)) {
+                && event.getEntity().getMainHandItem().is(Tags.Items.SHEARS)) {
 
             event.setNewSpeed(event.getOriginalSpeed() * 5.0F);
         }
