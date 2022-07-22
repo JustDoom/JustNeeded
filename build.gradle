@@ -4,7 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.+'
 }
 
-version = '1.19-1.0.1'
+version = '1.19-1.0.2'
 group = 'com.imjustdoom.justneeded' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'justneeded'
 
