@@ -4,7 +4,7 @@ license="All rights reserved"
 issueTrackerURL="https://github.com/JustDoom/Just-Needed-Forge/issues"
 [[mods]] #mandatory
 modId="justneeded" #mandatory
-version="1.18.2-1.0.3" #mandatory
+version="1.18.2-1.0.4" #mandatory
 displayName="Just Needed" #mandatory
 logoFile="logo.png" #optional
 #credits="Thanks for this example mod goes to Java" #optional
