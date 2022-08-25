@@ -1,0 +1,38 @@
+{
+  "replace": false,
+  "values":
+  [
+    "justneeded:white_wool_stairs",
+    "justneeded:white_wool_slab",
+    "justneeded:orange_wool_stairs",
+    "justneeded:orange_wool_slab",
+    "justneeded:magenta_wool_stairs",
+    "justneeded:magenta_wool_slab",
+    "justneeded:light_blue_wool_stairs",
+    "justneeded:light_blue_wool_slab",
+    "justneeded:yellow_wool_stairs",
+    "justneeded:yellow_wool_slab",
+    "justneeded:lime_wool_stairs",
+    "justneeded:lime_wool_slab",
+    "justneeded:pink_wool_stairs",
+    "justneeded:pink_wool_slab",
+    "justneeded:gray_wool_stairs",
+    "justneeded:gray_wool_slab",
+    "justneeded:light_gray_wool_stairs",
+    "justneeded:light_gray_wool_slab",
+    "justneeded:cyan_wool_stairs",
+    "justneeded:cyan_wool_slab",
+    "justneeded:purple_wool_stairs",
+    "justneeded:purple_wool_slab",
+    "justneeded:blue_wool_stairs",
+    "justneeded:blue_wool_slab",
+    "justneeded:brown_wool_stairs",
+    "justneeded:brown_wool_slab",
+    "justneeded:green_wool_stairs",
+    "justneeded:green_wool_slab",
+    "justneeded:red_wool_stairs",
+    "justneeded:red_wool_slab",
+    "justneeded:black_wool_stairs",
+    "justneeded:black_wool_slab"
+  ]
+}
