@@ -4,6 +4,7 @@
   "package": "com.imjustdoom.justneeded.listener",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "BlockBreakMixin",
     "CropTrampleListener",
     "GhastDeathMixin"
   ],
