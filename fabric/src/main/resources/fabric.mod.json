@@ -19,6 +19,9 @@
       "net.examplemod.fabric.ExampleModFabric"
     ]
   },
+  "mixins": [
+    "justneeded.mixins.json"
+  ],
   "depends": {
     "fabric": "*",
     "minecraft": ">=1.19.2",

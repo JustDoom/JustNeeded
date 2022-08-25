@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0",
+  "package": "com.imjustdoom.justneeded.listener",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "CropTrampleListener",
+    "GhastDeathMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
