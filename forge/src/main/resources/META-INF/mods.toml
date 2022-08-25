@@ -1,15 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "[43,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "GPLv3"
 
 [[mods]]
 modId = "justneeded"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "Just Needed"
+authors = "JustDoom"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+This mod adds items, blocks, recipes that are just needed to be in minecraft!
 '''
 #logoFile = ""
 

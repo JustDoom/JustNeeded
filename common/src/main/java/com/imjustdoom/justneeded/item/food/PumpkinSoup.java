@@ -12,7 +12,7 @@ public class PumpkinSoup extends Item {
 
     public PumpkinSoup() {
         super(new Item.Properties()
-                .tab(JustNeeded.EXAMPLE_TAB)
+                .tab(JustNeeded.JUSTNEEDED_TAB)
                 .stacksTo(1)
                 .food(new FoodProperties.Builder()
                         .nutrition(6)

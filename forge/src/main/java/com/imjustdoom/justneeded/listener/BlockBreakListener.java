@@ -1,4 +1,4 @@
-package net.examplemod.forge.listener;
+package com.imjustdoom.forge.listener;
 
 import com.imjustdoom.justneeded.JustNeeded;
 import com.imjustdoom.justneeded.block.WoolSlab;

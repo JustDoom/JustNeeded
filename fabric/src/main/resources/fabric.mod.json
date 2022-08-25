@@ -1,22 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "justneeded",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Just Needed",
+  "description": "This mod adds items, blocks, recipes that are just needed to be in minecraft!",
   "authors": [
-    "Me!"
+    "JustDoom"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/JustDoom/JustNeeded"
   },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+  "license": "GPLv3",
+  "icon": "assets/justneeded/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.examplemod.fabric.ExampleModFabric"
+      "com.imjustdoom.justneeded.JustNeededFabric"
     ]
   },
   "mixins": [
