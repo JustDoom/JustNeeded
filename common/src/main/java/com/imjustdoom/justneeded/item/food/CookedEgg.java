@@ -8,7 +8,7 @@ public class CookedEgg extends Item {
 
     public CookedEgg() {
         super(new Item.Properties()
-                .tab(JustNeeded.JUSTNEEDED_TAB)
+                .arch$tab(JustNeeded.JUSTNEEDED_TAB)
                 .food(new FoodProperties.Builder()
                         .nutrition(4)
                         .saturationMod(5)

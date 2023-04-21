@@ -12,7 +12,7 @@ import net.minecraft.world.item.Items;
 public class JustNeeded {
     public static final String MOD_ID = "justneeded";
 
-    public static final CreativeModeTab JUSTNEEDED_TAB = CreativeTabRegistry.create(new ResourceLocation(MOD_ID, "justneeded_tab"), () -> new ItemStack(ItemInit.COOKED_EGG.get()));
+    public static final CreativeTabRegistry.TabSupplier JUSTNEEDED_TAB = CreativeTabRegistry.create(new ResourceLocation(MOD_ID, "justneeded_tab"), () -> new ItemStack(ItemInit.COOKED_EGG.get()));
 
     public static void init() {
         BlockInit.init();

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "justneeded:blocks/sugar_cane_block"
+    "all": "justneeded:block/sugar_cane_block"
   }
 }

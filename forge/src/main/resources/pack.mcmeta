@@ -1,6 +1,9 @@
 {
   "pack": {
-    "description": "Just Needed",
-    "pack_format": 9
+    "description": {
+      "text": "Just Needed"
+    },
+    "forge:server_data_pack_format": 12,
+    "pack_format": 13
   }
 }

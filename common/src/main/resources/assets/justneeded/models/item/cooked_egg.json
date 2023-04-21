@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "justneeded:items/cooked_egg"
+    "layer0": "justneeded:item/cooked_egg"
   }
 }

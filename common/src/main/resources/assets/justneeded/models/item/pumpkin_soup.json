@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "justneeded:items/pumpkin_soup"
+    "layer0": "justneeded:item/pumpkin_soup"
   }
 }

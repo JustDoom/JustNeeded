@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "justneeded:blocks/spider_eye_block"
+    "all": "justneeded:block/spider_eye_block"
   }
 }

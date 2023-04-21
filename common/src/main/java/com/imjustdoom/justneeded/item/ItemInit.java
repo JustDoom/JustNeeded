@@ -6,11 +6,12 @@ import com.imjustdoom.justneeded.item.food.PumpkinSoup;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 
 public class ItemInit {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(JustNeeded.MOD_ID, Registry.ITEM_REGISTRY);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(JustNeeded.MOD_ID, Registries.ITEM);
 
     //Food Items
     public static final RegistrySupplier<CookedEgg> COOKED_EGG = ITEMS.register("cooked_egg", CookedEgg::new);

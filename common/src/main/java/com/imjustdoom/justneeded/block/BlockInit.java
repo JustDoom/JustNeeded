@@ -2,9 +2,12 @@ package com.imjustdoom.justneeded.block;
 
 import com.imjustdoom.justneeded.JustNeeded;
 import com.imjustdoom.justneeded.item.ItemInit;
+import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -16,7 +19,7 @@ import java.util.function.Supplier;
 
 public class BlockInit {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(JustNeeded.MOD_ID, Registry.BLOCK_REGISTRY);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(JustNeeded.MOD_ID, Registries.BLOCK);
 
     // | --------------------------- |
     // | Blocks                      |
@@ -336,15 +339,15 @@ public class BlockInit {
             JustNeeded.JUSTNEEDED_TAB
     );
 
-    private static <T extends Block> RegistrySupplier<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistrySupplier<T> registerBlock(String name, Supplier<T> block, CreativeTabRegistry.TabSupplier tab) {
         RegistrySupplier<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
 
-    private static <T extends Block> RegistrySupplier<Item> registerBlockItem(String name, RegistrySupplier<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistrySupplier<Item> registerBlockItem(String name, RegistrySupplier<T> block, CreativeTabRegistry.TabSupplier tab) {
         return ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(tab)));
+                new Item.Properties().arch$tab(tab)));
     }
 
     public static void init() {

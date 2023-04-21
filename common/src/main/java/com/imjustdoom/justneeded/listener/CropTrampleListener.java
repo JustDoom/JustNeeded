@@ -34,7 +34,7 @@ public abstract class CropTrampleListener extends Block {
 
         for (ItemStack itemStack : entity.getArmorSlots()) {
             if (!(itemStack.getItem() instanceof ArmorItem armorItem)
-                    || armorItem.getSlot() != EquipmentSlot.FEET
+                    || armorItem.getEquipmentSlot() != EquipmentSlot.FEET
                     || EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FALL_PROTECTION, itemStack) == 0) continue;
 
             super.fallOn(world, state, pos, entity, fallDistance);

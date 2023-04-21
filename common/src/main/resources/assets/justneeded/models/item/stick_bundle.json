@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "justneeded:items/stick_bundle"
+    "layer0": "justneeded:item/stick_bundle"
   }
 }
