@@ -12,7 +12,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 
 import java.util.function.Supplier;
 
@@ -24,16 +25,13 @@ public class BlockInit {
     // | Blocks                      |
     // | --------------------------- |
     public static final RegistrySupplier<Block> SPIDER_EYE_BLOCK = registerBlock("spider_eye_block",
-            () -> new Block(Block.Properties.of()
-                    .mapColor(MapColor.COLOR_PURPLE)
+            () -> new Block(Block.Properties.of(Material.CLAY, MaterialColor.COLOR_PURPLE)
                     .strength(0.4f)
                     .sound(SoundType.SLIME_BLOCK)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> SUGAR_CANE_BLOCK = registerBlock("sugar_cane_block",
-            () -> new Block(Block.Properties.of()
-                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
-                    // TODO: make flammable
+            () -> new Block(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN)
                     .strength(2.0F, 3.0F)
                     .sound(SoundType.WOOD)),
             JustNeeded.JUSTNEEDED_TAB
@@ -43,33 +41,27 @@ public class BlockInit {
     // | Stairs                      |
     // | --------------------------- |
     public static final RegistrySupplier<Block> DIRT_STAIRS = registerBlock("dirt_stairs",
-            () -> new StairBlock(Blocks.DIRT.defaultBlockState(), Block.Properties.of()
-                    .mapColor(MapColor.DIRT)
+            () -> new StairBlock(Blocks.DIRT.defaultBlockState(), Block.Properties.of(Material.DIRT, MaterialColor.DIRT)
                     .strength(0.5f)
                     .sound(SoundType.GRAVEL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GLOWSTONE_STAIRS = registerBlock("glowstone_stairs",
-            () -> new StairBlock(Blocks.GLOWSTONE.defaultBlockState(), Block.Properties.of()
-                    .mapColor(MapColor.SAND)
-                    // TODO: is solid blocking?
+            () -> new StairBlock(Blocks.GLOWSTONE.defaultBlockState(), Block.Properties.of(Material.GLASS, MaterialColor.SAND)
                     .strength(0.3f)
                     .sound(SoundType.GLASS)
                     .lightLevel(value -> 15)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> SUGAR_CANE_STAIRS = registerBlock("sugar_cane_stairs",
-            () -> new StairBlock(BlockInit.SUGAR_CANE_BLOCK.get().defaultBlockState(), Block.Properties.of()
-                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
-                    // TODO: flammable
+            () -> new StairBlock(BlockInit.SUGAR_CANE_BLOCK.get().defaultBlockState(), Block.Properties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN)
                     .strength(2.0f, 3.0f)
                     .sound(SoundType.WOOD)),
             JustNeeded.JUSTNEEDED_TAB
     );
 
     public static final RegistrySupplier<Block> SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
-            () -> new StairBlock(Blocks.SMOOTH_STONE.defaultBlockState(), Block.Properties.of()
-                    .mapColor(MapColor.STONE)
+            () -> new StairBlock(Blocks.SMOOTH_STONE.defaultBlockState(), Block.Properties.of(Material.STONE, MaterialColor.STONE)
                     .strength(2.0f, 6.0f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)),
@@ -347,13 +339,13 @@ public class BlockInit {
             JustNeeded.JUSTNEEDED_TAB
     );
 
-    private static <T extends Block> RegistrySupplier<T> registerBlock(String name, Supplier<T> block, RegistrySupplier<CreativeModeTab> tab) {
+    private static <T extends Block> RegistrySupplier<T> registerBlock(String name, Supplier<T> block, CreativeTabRegistry.TabSupplier tab) {
         RegistrySupplier<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
 
-    private static <T extends Block> RegistrySupplier<Item> registerBlockItem(String name, RegistrySupplier<T> block, RegistrySupplier<CreativeModeTab> tab) {
+    private static <T extends Block> RegistrySupplier<Item> registerBlockItem(String name, RegistrySupplier<T> block, CreativeTabRegistry.TabSupplier tab) {
         return ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().arch$tab(tab)));
     }

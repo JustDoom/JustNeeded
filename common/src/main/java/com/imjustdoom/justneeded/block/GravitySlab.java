@@ -6,7 +6,6 @@ import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.ParticleUtils;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.level.BlockGetter;
@@ -16,6 +15,7 @@ import net.minecraft.world.level.block.Fallable;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
 
 import java.util.Random;
 
@@ -48,14 +48,18 @@ public class GravitySlab extends SlabBlock implements Fallable {
     }
 
     public static boolean isFree(BlockState blockState) {
-        return blockState.isAir() || blockState.is(BlockTags.FIRE) || blockState.liquid() || blockState.canBeReplaced();
+        Material material = blockState.getMaterial();
+        return blockState.isAir() || blockState.is(BlockTags.FIRE) || material.isLiquid() || material.isReplaceable();
     }
 
     public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
         if (randomSource.nextInt(16) == 0) {
             BlockPos blockPos2 = blockPos.below();
             if (isFree(level.getBlockState(blockPos2))) {
-                ParticleUtils.spawnParticleBelow(level, blockPos, randomSource, new BlockParticleOption(ParticleTypes.FALLING_DUST, blockState));
+                double d = (double)blockPos.getX() + randomSource.nextDouble();
+                double e = (double)blockPos.getY() - 0.05;
+                double f = (double)blockPos.getZ() + randomSource.nextDouble();
+                level.addParticle(new BlockParticleOption(ParticleTypes.FALLING_DUST, blockState), d, e, f, 0.0, 0.0, 0.0);
             }
         }
 

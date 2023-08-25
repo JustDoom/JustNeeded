@@ -22,7 +22,7 @@ public abstract class GhastDeathMixin {
         if (!(((LivingEntity) (Object) this) instanceof Ghast) || !(source.getEntity() instanceof Piglin) || !(source.getDirectEntity() instanceof Arrow)) return;
 
         Ghast ghast = (Ghast) (Object) this;
-        Level world = source.getEntity().level();
+        Level world = source.getEntity().getLevel();
         ItemEntity item = new ItemEntity(world, ghast.getX(), ghast.getY(), ghast.getZ(), new ItemStack(Items.MUSIC_DISC_PIGSTEP, 1));
 
         world.addFreshEntity(item);
