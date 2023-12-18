@@ -4,6 +4,7 @@
   "package": "com.imjustdoom.justneeded.forge.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "FireBlockInvoker"
   ],
   "injectors": {
     "defaultRequire": 1
