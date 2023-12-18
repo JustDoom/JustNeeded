@@ -2,12 +2,9 @@ package com.imjustdoom.justneeded.block;
 
 import com.imjustdoom.justneeded.JustNeeded;
 import com.imjustdoom.justneeded.item.ItemInit;
-import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -33,7 +30,7 @@ public class BlockInit {
     public static final RegistrySupplier<Block> SUGAR_CANE_BLOCK = registerBlock("sugar_cane_block",
             () -> new Block(Block.Properties.of()
                     .mapColor(MapColor.COLOR_LIGHT_GREEN)
-                    // TODO: make flammable
+                    .ignitedByLava()
                     .strength(2.0F, 3.0F)
                     .sound(SoundType.WOOD)),
             JustNeeded.JUSTNEEDED_TAB
@@ -61,7 +58,7 @@ public class BlockInit {
     public static final RegistrySupplier<Block> SUGAR_CANE_STAIRS = registerBlock("sugar_cane_stairs",
             () -> new StairBlock(BlockInit.SUGAR_CANE_BLOCK.get().defaultBlockState(), Block.Properties.of()
                     .mapColor(MapColor.COLOR_LIGHT_GREEN)
-                    // TODO: flammable
+                    .ignitedByLava()
                     .strength(2.0f, 3.0f)
                     .sound(SoundType.WOOD)),
             JustNeeded.JUSTNEEDED_TAB
@@ -81,20 +78,24 @@ public class BlockInit {
     // | Slabs                       |
     // | --------------------------- |
     public static final RegistrySupplier<Block> DIRT_SLAB = registerBlock("dirt_slab",
-            () -> new SlabBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT)
+            () -> new SlabBlock(Block.Properties.of()
+                    .mapColor(MapColor.DIRT)
                     .strength(0.5f, 0.5f)
                     .sound(SoundType.GRAVEL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GLOWSTONE_SLAB = registerBlock("glowstone_slab",
-            () -> new SlabBlock(Block.Properties.of(Material.GLASS, MaterialColor.SAND)
+            () -> new SlabBlock(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
                     .strength(0.3f)
                     .sound(SoundType.GLASS)
                     .lightLevel(value -> 15)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> SUGAR_CANE_SLAB = registerBlock("sugar_cane_slab",
-            () -> new SlabBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN)
+            () -> new SlabBlock(Block.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
+                    .ignitedByLava()
                     .strength(2.0f, 3.0f)
                     .sound(SoundType.WOOD)),
             JustNeeded.JUSTNEEDED_TAB
@@ -103,20 +104,23 @@ public class BlockInit {
     // | --------------------------- |
     // | Gravity Affected Stairs     |
     // | --------------------------- |
-    public static final RegistrySupplier<Block> SAND_STAIRS = registerBlock("sand_stairs",
-            () -> new GravityStairs(Blocks.SAND::defaultBlockState, Block.Properties.of(Material.SAND, MaterialColor.SAND)
+    public static final RegistrySupplier<Block> SAND_STAIRS = registerBlock("sand_stairs", // TODO: make this turn to glass when lightening hits it
+            () -> new GravityStairs(Blocks.SAND::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
                     .strength(0.5f)
                     .sound(SoundType.SAND)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> RED_SAND_STAIRS = registerBlock("red_sand_stairs",
-            () -> new GravityStairs(Blocks.RED_SAND::defaultBlockState, Block.Properties.of(Material.SAND, MaterialColor.COLOR_ORANGE)
+            () -> new GravityStairs(Blocks.RED_SAND::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
                     .strength(0.5f)
                     .sound(SoundType.SAND)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GRAVEL_STAIRS = registerBlock("gravel_stairs",
-            () -> new GravityStairs(Blocks.GRAVEL::defaultBlockState, Block.Properties.of(Material.SAND, MaterialColor.STONE)
+            () -> new GravityStairs(Blocks.GRAVEL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.STONE)
                     .strength(0.6f)
                     .sound(SoundType.GRAVEL)),
             JustNeeded.JUSTNEEDED_TAB
@@ -127,19 +131,22 @@ public class BlockInit {
     // | Gravity Affected Slabs      |
     // | --------------------------- |
     public static final RegistrySupplier<Block> SAND_SLAB = registerBlock("sand_slab",
-            () -> new GravitySlab(Block.Properties.of(Material.SAND, MaterialColor.SAND)
+            () -> new GravitySlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
                     .strength(0.5f)
                     .sound(SoundType.SAND)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> RED_SAND_SLAB = registerBlock("red_sand_slab",
-            () -> new GravitySlab(Block.Properties.of(Material.SAND, MaterialColor.COLOR_ORANGE)
+            () -> new GravitySlab(Block.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
                     .strength(0.5f)
                     .sound(SoundType.SAND)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GRAVEL_SLAB = registerBlock("gravel_slab",
-            () -> new GravitySlab(Block.Properties.of(Material.SAND, MaterialColor.STONE)
+            () -> new GravitySlab(Block.Properties.of()
+                    .mapColor(MapColor.STONE)
                     .strength(0.6f)
                     .sound(SoundType.GRAVEL)),
             JustNeeded.JUSTNEEDED_TAB
@@ -150,97 +157,129 @@ public class BlockInit {
     // | Wool Stairs                 |
     // | --------------------------- |
     public static final RegistrySupplier<Block> WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
-            () -> new WoolStairs(Blocks.WHITE_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.SNOW)
+            () -> new WoolStairs(Blocks.WHITE_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> ORANGE_WOOL_STAIRS = registerBlock("orange_wool_stairs",
-            () -> new WoolStairs(Blocks.ORANGE_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_ORANGE)
+            () -> new WoolStairs(Blocks.ORANGE_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> MAGENTA_WOOL_STAIRS = registerBlock("magenta_wool_stairs",
-            () -> new WoolStairs(Blocks.MAGENTA_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_MAGENTA)
+            () -> new WoolStairs(Blocks.MAGENTA_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> LIGHT_BLUE_WOOL_STAIRS = registerBlock("light_blue_wool_stairs",
-            () -> new WoolStairs(Blocks.LIGHT_BLUE_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_BLUE)
+            () -> new WoolStairs(Blocks.LIGHT_BLUE_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> YELLOW_WOOL_STAIRS = registerBlock("yellow_wool_stairs",
-            () -> new WoolStairs(Blocks.YELLOW_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_YELLOW)
+            () -> new WoolStairs(Blocks.YELLOW_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> LIME_WOOL_STAIRS = registerBlock("lime_wool_stairs",
-            () -> new WoolStairs(Blocks.LIME_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_GREEN)
+            () -> new WoolStairs(Blocks.LIME_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> PINK_WOOL_STAIRS = registerBlock("pink_wool_stairs",
-            () -> new WoolStairs(Blocks.PINK_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_PINK)
+            () -> new WoolStairs(Blocks.PINK_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GRAY_WOOL_STAIRS = registerBlock("gray_wool_stairs",
-            () -> new WoolStairs(Blocks.GRAY_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_GRAY)
+            () -> new WoolStairs(Blocks.GRAY_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> LIGHT_GRAY_WOOL_STAIRS = registerBlock("light_gray_wool_stairs",
-            () -> new WoolStairs(Blocks.LIGHT_GRAY_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_GRAY)
+            () -> new WoolStairs(Blocks.LIGHT_GRAY_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> CYAN_WOOL_STAIRS = registerBlock("cyan_wool_stairs",
-            () -> new WoolStairs(Blocks.CYAN_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_CYAN)
+            () -> new WoolStairs(Blocks.CYAN_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> PURPLE_WOOL_STAIRS = registerBlock("purple_wool_stairs",
-            () -> new WoolStairs(Blocks.PURPLE_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_PURPLE)
+            () -> new WoolStairs(Blocks.PURPLE_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> BLUE_WOOL_STAIRS = registerBlock("blue_wool_stairs",
-            () -> new WoolStairs(Blocks.BLUE_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_BLUE)
+            () -> new WoolStairs(Blocks.BLUE_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> BROWN_WOOL_STAIRS = registerBlock("brown_wool_stairs",
-            () -> new WoolStairs(Blocks.BROWN_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN)
+            () -> new WoolStairs(Blocks.BROWN_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GREEN_WOOL_STAIRS = registerBlock("green_wool_stairs",
-            () -> new WoolStairs(Blocks.GREEN_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_GREEN)
+            () -> new WoolStairs(Blocks.GREEN_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> RED_WOOL_STAIRS = registerBlock("red_wool_stairs",
-            () -> new WoolStairs(Blocks.RED_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_RED)
+            () -> new WoolStairs(Blocks.RED_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> BLACK_WOOL_STAIRS = registerBlock("black_wool_stairs",
-            () -> new WoolStairs(Blocks.BLACK_WOOL::defaultBlockState, Block.Properties.of(Material.WOOL, MaterialColor.COLOR_BLACK)
+            () -> new WoolStairs(Blocks.BLACK_WOOL::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
@@ -251,97 +290,129 @@ public class BlockInit {
     // | Wool Slabs                  |
     // | --------------------------- |
     public static final RegistrySupplier<Block> WHITE_WOOL_SLAB = registerBlock("white_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.SNOW)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> ORANGE_WOOL_SLAB = registerBlock("orange_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_ORANGE)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> MAGENTA_WOOL_SLAB = registerBlock("magenta_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_MAGENTA)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> LIGHT_BLUE_WOOL_SLAB = registerBlock("light_blue_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_BLUE)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> YELLOW_WOOL_SLAB = registerBlock("yellow_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_YELLOW)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> LIME_WOOL_SLAB = registerBlock("lime_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_GREEN)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> PINK_WOOL_SLAB = registerBlock("pink_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_PINK)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GRAY_WOOL_SLAB = registerBlock("gray_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_GRAY)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> LIGHT_GRAY_WOOL_SLAB = registerBlock("light_gray_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_GRAY)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> CYAN_WOOL_SLAB = registerBlock("cyan_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_CYAN)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> PURPLE_WOOL_SLAB = registerBlock("purple_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_PURPLE)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> BLUE_WOOL_SLAB = registerBlock("blue_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_BLUE)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> BROWN_WOOL_SLAB = registerBlock("brown_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GREEN_WOOL_SLAB = registerBlock("green_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_GREEN)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> RED_WOOL_SLAB = registerBlock("red_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_RED)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> BLACK_WOOL_SLAB = registerBlock("black_wool_slab",
-            () -> new WoolSlab(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_BLACK)
+            () -> new WoolSlab(Block.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .ignitedByLava()
                     .strength(0.8f)
                     .sound(SoundType.WOOL)),
             JustNeeded.JUSTNEEDED_TAB

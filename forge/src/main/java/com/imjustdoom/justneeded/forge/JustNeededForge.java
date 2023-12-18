@@ -1,7 +1,7 @@
-package com.imjustdoom.forge;
+package com.imjustdoom.justneeded.forge;
 
-import dev.architectury.platform.forge.EventBuses;
 import com.imjustdoom.justneeded.JustNeeded;
+import dev.architectury.platform.forge.EventBuses;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -11,5 +11,7 @@ public class JustNeededForge {
         // Submit our event bus to let architectury register our content on the right time
         EventBuses.registerModEventBus(JustNeeded.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
         JustNeeded.init();
+
+        // TODO: Make some blocks flammable
     }
 }

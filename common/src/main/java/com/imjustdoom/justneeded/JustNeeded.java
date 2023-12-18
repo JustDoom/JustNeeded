@@ -8,7 +8,6 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -21,16 +20,17 @@ public class JustNeeded {
     public static final RegistrySupplier<CreativeModeTab> JUSTNEEDED_TAB = TABS.register(
             "justneeded_tab",
             () -> CreativeTabRegistry.create(
-                    Component.translatable("category.justneeded"), // TODO: make sure this works
+                    Component.translatable("category.justneeded.justneeded_tab"),
                     () -> new ItemStack(ItemInit.COOKED_EGG.get())
             )
     );
 
     public static void init() {
+        TABS.register();
+
         BlockInit.init();
         ItemInit.init();
 
-        // TODO: Add any 1.20 items
         FuelRegistry.register(80, Items.PAPER);
         FuelRegistry.register(255, Items.BOOK);
         FuelRegistry.register(255, Items.WRITTEN_BOOK);
