@@ -31,6 +31,8 @@ public class JustNeeded {
         BlockInit.init();
         ItemInit.init();
 
+//        ModLootTableModifiers.modifyLootTables();
+
         FuelRegistry.register(80, Items.PAPER);
         FuelRegistry.register(255, Items.BOOK);
         FuelRegistry.register(255, Items.WRITTEN_BOOK);
@@ -50,4 +52,6 @@ public class JustNeeded {
         FuelRegistry.register(90, Items.TALL_GRASS);
         FuelRegistry.register(90, Items.VINE);
     }
+
+    // TODO: Add blocks/items to tags
 }

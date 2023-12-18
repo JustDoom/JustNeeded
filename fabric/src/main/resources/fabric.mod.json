@@ -19,7 +19,7 @@
     ]
   },
   "mixins": [
-    "justneeded.mixins.json"
+    "justneeded-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",
