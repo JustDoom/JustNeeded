@@ -1,5 +1,5 @@
 {
-  "itemGroup.justneeded.justneeded_tab": "需要这些",
+  "category.justneeded.justneeded_tab": "需要这些",
 
   "item.justneeded.cooked_egg": "荷包蛋",
   "item.justneeded.pumpkin_soup": "南瓜汤",
@@ -56,5 +56,5 @@
   "block.justneeded.glowstone_slab": "萤石台阶",
   "block.justneeded.sand_slab": "沙子台阶",
   "block.justneeded.red_sand_slab": "红纱台阶",
-  "block.justneeded.gravel_slab": "沙砾台阶",
+  "block.justneeded.gravel_slab": "沙砾台阶"
 }
