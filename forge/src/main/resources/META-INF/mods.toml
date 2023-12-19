@@ -9,9 +9,9 @@ version = "${version}"
 displayName = "Just Needed"
 authors = "JustDoom"
 description = '''
-This mod adds items, blocks, recipes that are just needed to be in minecraft!
+This mod adds items, blocks, recipes that are "just needed" to be in minecraft!
 '''
-#logoFile = ""
+logoFile = "logo-forge.png"
 
 [[dependencies.justneeded]]
 modId = "forge"

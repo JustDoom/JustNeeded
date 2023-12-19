@@ -3,7 +3,7 @@
   "id": "justneeded",
   "version": "${version}",
   "name": "Just Needed",
-  "description": "This mod adds items, blocks, recipes that are just needed to be in minecraft!",
+  "description": "This mod adds items, blocks, recipes that are \"just needed\" to be in minecraft!",
   "authors": [
     "JustDoom"
   ],
@@ -11,7 +11,7 @@
     "sources": "https://github.com/JustDoom/JustNeeded"
   },
   "license": "GPLv3",
-  "icon": "assets/justneeded/icon.png",
+  "icon": "assets/justneeded/logo-fabric.png",
   "environment": "*",
   "entrypoints": {
     "main": [

@@ -39,7 +39,7 @@ public class BlockInit {
     // | --------------------------- |
     // | Stairs                      |
     // | --------------------------- |
-    public static final RegistrySupplier<Block> DIRT_STAIRS = registerBlock("dirt_stairs",
+    public static final RegistrySupplier<Block> DIRT_STAIRS = registerBlock("dirt_stairs", // TODO: make grass variants that can have grass grow on them
             () -> new StairBlock(Blocks.DIRT.defaultBlockState(), Block.Properties.of()
                     .mapColor(MapColor.DIRT)
                     .strength(0.5f)
