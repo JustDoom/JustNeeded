@@ -3,14 +3,17 @@ package com.imjustdoom.justneeded;
 import com.imjustdoom.justneeded.block.BlockInit;
 import com.imjustdoom.justneeded.item.ItemInit;
 import dev.architectury.registry.CreativeTabRegistry;
+import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import dev.architectury.registry.fuel.FuelRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.GrassColor;
 
 public class JustNeeded {
     public static final String MOD_ID = "justneeded";
@@ -30,6 +33,13 @@ public class JustNeeded {
 
         BlockInit.init();
         ItemInit.init();
+
+        ColorHandlerRegistry.registerBlockColors((blockState, blockAndTintGetter, blockPos, i) -> {
+            if (blockAndTintGetter == null || blockPos == null) {
+                return GrassColor.getDefaultColor();
+            }
+            return BiomeColors.getAverageGrassColor(blockAndTintGetter, blockPos);
+        }, BlockInit.GRASS_SLAB, BlockInit.GRASS_STAIRS);
 
 //        ModLootTableModifiers.modifyLootTables();
 

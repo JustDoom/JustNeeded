@@ -1,6 +1,12 @@
 package com.imjustdoom.justneeded.block;
 
 import com.imjustdoom.justneeded.JustNeeded;
+import com.imjustdoom.justneeded.block.custom.GrassSlab;
+import com.imjustdoom.justneeded.block.custom.GrassStairs;
+import com.imjustdoom.justneeded.block.types.GravitySlab;
+import com.imjustdoom.justneeded.block.types.GravityStairs;
+import com.imjustdoom.justneeded.block.types.WoolSlab;
+import com.imjustdoom.justneeded.block.types.WoolStairs;
 import com.imjustdoom.justneeded.item.ItemInit;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -46,6 +52,14 @@ public class BlockInit {
                     .sound(SoundType.GRAVEL)),
             JustNeeded.JUSTNEEDED_TAB
     );
+    public static final RegistrySupplier<Block> GRASS_STAIRS = registerBlock("grass_stairs", // TODO: make grass variants that can have grass grow on them
+            () -> new GrassStairs(Blocks.GRASS::defaultBlockState, Block.Properties.of()
+                    .mapColor(MapColor.GRASS)
+                    .strength(0.5f)
+                    .sound(SoundType.GRAVEL)
+                    .randomTicks()),
+            JustNeeded.JUSTNEEDED_TAB
+    );
     public static final RegistrySupplier<Block> GLOWSTONE_STAIRS = registerBlock("glowstone_stairs",
             () -> new StairBlock(Blocks.GLOWSTONE.defaultBlockState(), Block.Properties.of()
                     .mapColor(MapColor.SAND)
@@ -82,6 +96,14 @@ public class BlockInit {
                     .mapColor(MapColor.DIRT)
                     .strength(0.5f, 0.5f)
                     .sound(SoundType.GRAVEL)),
+            JustNeeded.JUSTNEEDED_TAB
+    );
+    public static final RegistrySupplier<Block> GRASS_SLAB = registerBlock("grass_slab",
+            () -> new GrassSlab(Block.Properties.of()
+                    .mapColor(MapColor.GRASS)
+                    .strength(0.5f, 0.5f)
+                    .sound(SoundType.GRAVEL)
+                    .randomTicks()),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GLOWSTONE_SLAB = registerBlock("glowstone_slab",

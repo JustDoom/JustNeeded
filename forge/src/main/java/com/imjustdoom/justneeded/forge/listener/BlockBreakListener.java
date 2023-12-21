@@ -1,8 +1,8 @@
 package com.imjustdoom.justneeded.forge.listener;
 
 import com.imjustdoom.justneeded.JustNeeded;
-import com.imjustdoom.justneeded.block.WoolSlab;
-import com.imjustdoom.justneeded.block.WoolStairs;
+import com.imjustdoom.justneeded.block.types.WoolSlab;
+import com.imjustdoom.justneeded.block.types.WoolStairs;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

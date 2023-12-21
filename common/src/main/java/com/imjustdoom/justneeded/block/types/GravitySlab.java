@@ -1,4 +1,4 @@
-package com.imjustdoom.justneeded.block;
+package com.imjustdoom.justneeded.block.types;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -16,8 +16,6 @@ import net.minecraft.world.level.block.Fallable;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-
-import java.util.Random;
 
 public class GravitySlab extends SlabBlock implements Fallable {
     public GravitySlab(BlockBehaviour.Properties p_53205_) {
