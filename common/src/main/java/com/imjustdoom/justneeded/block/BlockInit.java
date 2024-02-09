@@ -45,14 +45,14 @@ public class BlockInit {
     // | --------------------------- |
     // | Stairs                      |
     // | --------------------------- |
-    public static final RegistrySupplier<Block> DIRT_STAIRS = registerBlock("dirt_stairs", // TODO: make grass variants that can have grass grow on them
+    public static final RegistrySupplier<Block> DIRT_STAIRS = registerBlock("dirt_stairs",
             () -> new StairBlock(Blocks.DIRT.defaultBlockState(), Block.Properties.of()
                     .mapColor(MapColor.DIRT)
                     .strength(0.5f)
                     .sound(SoundType.GRAVEL)),
             JustNeeded.JUSTNEEDED_TAB
     );
-    public static final RegistrySupplier<Block> GRASS_STAIRS = registerBlock("grass_stairs", // TODO: make grass variants that can have grass grow on them
+    public static final RegistrySupplier<Block> GRASS_STAIRS = registerBlock("grass_stairs",
             () -> new GrassStairs(Blocks.GRASS::defaultBlockState, Block.Properties.of()
                     .mapColor(MapColor.GRASS)
                     .strength(0.5f)
@@ -126,7 +126,7 @@ public class BlockInit {
     // | --------------------------- |
     // | Gravity Affected Stairs     |
     // | --------------------------- |
-    public static final RegistrySupplier<Block> SAND_STAIRS = registerBlock("sand_stairs", // TODO: make this turn to glass when lightening hits it
+    public static final RegistrySupplier<Block> SAND_STAIRS = registerBlock("sand_stairs",
             () -> new GravityStairs(Blocks.SAND::defaultBlockState, Block.Properties.of()
                     .mapColor(MapColor.SAND)
                     .strength(0.5f)
