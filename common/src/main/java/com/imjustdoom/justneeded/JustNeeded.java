@@ -2,6 +2,7 @@ package com.imjustdoom.justneeded;
 
 import com.imjustdoom.justneeded.block.BlockInit;
 import com.imjustdoom.justneeded.item.ItemInit;
+import com.imjustdoom.justneeded.util.ModLootTableModifiers;
 import dev.architectury.event.events.common.LightningEvent;
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
@@ -50,7 +51,7 @@ public class JustNeeded {
             return BiomeColors.getAverageGrassColor(blockAndTintGetter, blockPos);
         }, BlockInit.GRASS_SLAB, BlockInit.GRASS_STAIRS);
 
-//        ModLootTableModifiers.modifyLootTables();
+        ModLootTableModifiers.modifyLootTables();
 
         FuelRegistry.register(80, Items.PAPER);
         FuelRegistry.register(255, Items.BOOK);
