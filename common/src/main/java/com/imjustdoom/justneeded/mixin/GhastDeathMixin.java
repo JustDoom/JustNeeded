@@ -1,4 +1,4 @@
-package com.imjustdoom.justneeded.listener;
+package com.imjustdoom.justneeded.mixin;
 
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;

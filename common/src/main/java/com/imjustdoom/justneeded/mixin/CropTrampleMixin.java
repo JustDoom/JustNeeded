@@ -1,4 +1,4 @@
-package com.imjustdoom.justneeded.listener;
+package com.imjustdoom.justneeded.mixin;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -18,9 +18,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(FarmBlock.class)
-public abstract class CropTrampleListener extends Block {
+public abstract class CropTrampleMixin extends Block {
 
-    public CropTrampleListener(Properties properties) {
+    public CropTrampleMixin(Properties properties) {
         super(properties);
     }
 
