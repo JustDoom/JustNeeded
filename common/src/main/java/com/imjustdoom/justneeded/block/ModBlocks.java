@@ -7,7 +7,7 @@ import com.imjustdoom.justneeded.block.types.GravitySlab;
 import com.imjustdoom.justneeded.block.types.GravityStairs;
 import com.imjustdoom.justneeded.block.types.WoolSlab;
 import com.imjustdoom.justneeded.block.types.WoolStairs;
-import com.imjustdoom.justneeded.item.ItemInit;
+import com.imjustdoom.justneeded.item.ModItems;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -19,7 +19,7 @@ import net.minecraft.world.level.material.MapColor;
 
 import java.util.function.Supplier;
 
-public class BlockInit {
+public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(JustNeeded.MOD_ID, Registries.BLOCK);
 
@@ -70,7 +70,7 @@ public class BlockInit {
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> SUGAR_CANE_STAIRS = registerBlock("sugar_cane_stairs",
-            () -> new StairBlock(BlockInit.SUGAR_CANE_BLOCK.get().defaultBlockState(), Block.Properties.of()
+            () -> new StairBlock(ModBlocks.SUGAR_CANE_BLOCK.get().defaultBlockState(), Block.Properties.of()
                     .mapColor(MapColor.COLOR_LIGHT_GREEN)
                     .ignitedByLava()
                     .strength(2.0f, 3.0f)
@@ -447,7 +447,7 @@ public class BlockInit {
     }
 
     private static <T extends Block> RegistrySupplier<Item> registerBlockItem(String name, RegistrySupplier<T> block, RegistrySupplier<CreativeModeTab> tab) {
-        return ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(),
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().arch$tab(tab)));
     }
 

@@ -1,6 +1,6 @@
 package com.imjustdoom.justneeded.block.custom;
 
-import com.imjustdoom.justneeded.block.BlockInit;
+import com.imjustdoom.justneeded.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -46,7 +46,7 @@ public class GrassStairs extends StairBlock {
                 return;
             }
 
-            arg2.setBlockAndUpdate(arg3, BlockInit.DIRT_STAIRS.get().defaultBlockState());
+            arg2.setBlockAndUpdate(arg3, ModBlocks.DIRT_STAIRS.get().defaultBlockState());
         } else {
             if (!arg2.isLoaded(arg3)) {
                 return;
@@ -57,8 +57,8 @@ public class GrassStairs extends StairBlock {
 
                 for(int i = 0; i < 4; ++i) {
                     BlockPos blockpos = arg3.offset(arg4.nextInt(3) - 1, arg4.nextInt(5) - 3, arg4.nextInt(3) - 1);
-                    if (arg2.getBlockState(blockpos).is(BlockInit.DIRT_STAIRS.get()) && canPropagate(blockstate, arg2, blockpos)) {
-                        arg2.setBlockAndUpdate(blockpos, BlockInit.GRASS_STAIRS.get().defaultBlockState());
+                    if (arg2.getBlockState(blockpos).is(ModBlocks.DIRT_STAIRS.get()) && canPropagate(blockstate, arg2, blockpos)) {
+                        arg2.setBlockAndUpdate(blockpos, ModBlocks.GRASS_STAIRS.get().defaultBlockState());
 //                        arg2.setBlockAndUpdate(blockpos, blockstate.setValue(SNOWY, arg2.getBlockState(blockpos.above()).is(Blocks.SNOW)));
                     }
                 }

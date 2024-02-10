@@ -1,7 +1,7 @@
 package com.imjustdoom.justneeded;
 
-import com.imjustdoom.justneeded.block.BlockInit;
-import com.imjustdoom.justneeded.item.ItemInit;
+import com.imjustdoom.justneeded.block.ModBlocks;
+import com.imjustdoom.justneeded.item.ModItems;
 import com.imjustdoom.justneeded.util.ModLootTableModifiers;
 import dev.architectury.event.events.common.LightningEvent;
 import dev.architectury.registry.CreativeTabRegistry;
@@ -34,22 +34,22 @@ public class JustNeeded {
             "justneeded_tab",
             () -> CreativeTabRegistry.create(
                     Component.translatable("category.justneeded.justneeded_tab"),
-                    () -> new ItemStack(ItemInit.COOKED_EGG.get())
+                    () -> new ItemStack(ModItems.COOKED_EGG.get())
             )
     );
 
     public static void init() {
         TABS.register();
 
-        BlockInit.init();
-        ItemInit.init();
+        ModBlocks.init();
+        ModItems.init();
 
         ColorHandlerRegistry.registerBlockColors((blockState, blockAndTintGetter, blockPos, i) -> {
             if (blockAndTintGetter == null || blockPos == null) {
                 return GrassColor.getDefaultColor();
             }
             return BiomeColors.getAverageGrassColor(blockAndTintGetter, blockPos);
-        }, BlockInit.GRASS_SLAB, BlockInit.GRASS_STAIRS);
+        }, ModBlocks.GRASS_SLAB, ModBlocks.GRASS_STAIRS);
 
         ModLootTableModifiers.modifyLootTables();
 

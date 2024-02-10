@@ -1,6 +1,6 @@
 package com.imjustdoom.justneeded.block.custom;
 
-import com.imjustdoom.justneeded.block.BlockInit;
+import com.imjustdoom.justneeded.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -55,9 +55,9 @@ public class GrassSlab extends SlabBlock {
 
                 for(int i = 0; i < 4; ++i) {
                     BlockPos blockpos = arg3.offset(arg4.nextInt(3) - 1, arg4.nextInt(5) - 3, arg4.nextInt(3) - 1);
-                    if (arg2.getBlockState(blockpos).is(BlockInit.DIRT_SLAB.get()) && canPropagate(blockstate, arg2, blockpos)) {
+                    if (arg2.getBlockState(blockpos).is(ModBlocks.DIRT_SLAB.get()) && canPropagate(blockstate, arg2, blockpos)) {
                         BlockState me = arg2.getBlockState(blockpos);
-                        arg2.setBlockAndUpdate(blockpos, BlockInit.GRASS_SLAB.get().defaultBlockState().setValue(TYPE, me.getValue(TYPE)));
+                        arg2.setBlockAndUpdate(blockpos, ModBlocks.GRASS_SLAB.get().defaultBlockState().setValue(TYPE, me.getValue(TYPE)));
 //                        arg2.setBlockAndUpdate(blockpos, blockstate.setValue(SNOWY, arg2.getBlockState(blockpos.above()).is(Blocks.SNOW)));
                     }
                 }
