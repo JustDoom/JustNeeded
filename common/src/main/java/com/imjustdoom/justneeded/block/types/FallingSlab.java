@@ -1,6 +1,5 @@
 package com.imjustdoom.justneeded.block.types;
 
-import com.imjustdoom.justneeded.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -18,8 +17,8 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class GravitySlab extends SlabBlock implements Fallable {
-    public GravitySlab(BlockBehaviour.Properties p_53205_) {
+public class FallingSlab extends SlabBlock implements Fallable {
+    public FallingSlab(BlockBehaviour.Properties p_53205_) {
         super(p_53205_);
     }
 

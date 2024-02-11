@@ -3,8 +3,8 @@ package com.imjustdoom.justneeded.block;
 import com.imjustdoom.justneeded.JustNeeded;
 import com.imjustdoom.justneeded.block.custom.GrassSlab;
 import com.imjustdoom.justneeded.block.custom.GrassStairs;
-import com.imjustdoom.justneeded.block.types.GravitySlab;
-import com.imjustdoom.justneeded.block.types.GravityStairs;
+import com.imjustdoom.justneeded.block.types.FallingSlab;
+import com.imjustdoom.justneeded.block.types.FallingStairs;
 import com.imjustdoom.justneeded.block.types.WoolSlab;
 import com.imjustdoom.justneeded.block.types.WoolStairs;
 import com.imjustdoom.justneeded.item.ModItems;
@@ -127,21 +127,21 @@ public class ModBlocks {
     // | Gravity Affected Stairs     |
     // | --------------------------- |
     public static final RegistrySupplier<Block> SAND_STAIRS = registerBlock("sand_stairs",
-            () -> new GravityStairs(Blocks.SAND::defaultBlockState, Block.Properties.of()
+            () -> new FallingStairs(Blocks.SAND::defaultBlockState, Block.Properties.of()
                     .mapColor(MapColor.SAND)
                     .strength(0.5f)
                     .sound(SoundType.SAND)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> RED_SAND_STAIRS = registerBlock("red_sand_stairs",
-            () -> new GravityStairs(Blocks.RED_SAND::defaultBlockState, Block.Properties.of()
+            () -> new FallingStairs(Blocks.RED_SAND::defaultBlockState, Block.Properties.of()
                     .mapColor(MapColor.COLOR_ORANGE)
                     .strength(0.5f)
                     .sound(SoundType.SAND)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GRAVEL_STAIRS = registerBlock("gravel_stairs",
-            () -> new GravityStairs(Blocks.GRAVEL::defaultBlockState, Block.Properties.of()
+            () -> new FallingStairs(Blocks.GRAVEL::defaultBlockState, Block.Properties.of()
                     .mapColor(MapColor.STONE)
                     .strength(0.6f)
                     .sound(SoundType.GRAVEL)),
@@ -153,21 +153,21 @@ public class ModBlocks {
     // | Gravity Affected Slabs      |
     // | --------------------------- |
     public static final RegistrySupplier<Block> SAND_SLAB = registerBlock("sand_slab",
-            () -> new GravitySlab(Block.Properties.of()
+            () -> new FallingSlab(Block.Properties.of()
                     .mapColor(MapColor.SAND)
                     .strength(0.5f)
                     .sound(SoundType.SAND)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> RED_SAND_SLAB = registerBlock("red_sand_slab",
-            () -> new GravitySlab(Block.Properties.of()
+            () -> new FallingSlab(Block.Properties.of()
                     .mapColor(MapColor.COLOR_ORANGE)
                     .strength(0.5f)
                     .sound(SoundType.SAND)),
             JustNeeded.JUSTNEEDED_TAB
     );
     public static final RegistrySupplier<Block> GRAVEL_SLAB = registerBlock("gravel_slab",
-            () -> new GravitySlab(Block.Properties.of()
+            () -> new FallingSlab(Block.Properties.of()
                     .mapColor(MapColor.STONE)
                     .strength(0.6f)
                     .sound(SoundType.GRAVEL)),

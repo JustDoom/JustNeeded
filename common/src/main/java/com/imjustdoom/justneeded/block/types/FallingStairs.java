@@ -18,9 +18,9 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.function.Supplier;
 
-public class GravityStairs extends StairBlock implements Fallable {
+public class FallingStairs extends StairBlock implements Fallable {
 
-    public GravityStairs(Supplier<BlockState> state, Properties properties) {
+    public FallingStairs(Supplier<BlockState> state, Properties properties) {
         super(state.get(), properties);
     }
 
