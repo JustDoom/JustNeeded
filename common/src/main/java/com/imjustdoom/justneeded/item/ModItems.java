@@ -1,8 +1,8 @@
 package com.imjustdoom.justneeded.item;
 
 import com.imjustdoom.justneeded.JustNeeded;
-import com.imjustdoom.justneeded.item.food.CookedEgg;
-import com.imjustdoom.justneeded.item.food.PumpkinSoup;
+import com.imjustdoom.justneeded.item.custom.food.CookedEgg;
+import com.imjustdoom.justneeded.item.custom.food.PumpkinSoup;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;

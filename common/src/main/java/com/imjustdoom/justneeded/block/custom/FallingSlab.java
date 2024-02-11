@@ -1,4 +1,4 @@
-package com.imjustdoom.justneeded.block.types;
+package com.imjustdoom.justneeded.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -18,19 +18,23 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class FallingSlab extends SlabBlock implements Fallable {
-    public FallingSlab(BlockBehaviour.Properties p_53205_) {
-        super(p_53205_);
+
+    public FallingSlab(BlockBehaviour.Properties properties) {
+        super(properties);
     }
 
+    @Override
     public void onPlace(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
         level.scheduleTick(blockPos, this, this.getDelayAfterPlace());
     }
 
+    @Override
     public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
         levelAccessor.scheduleTick(blockPos, this, this.getDelayAfterPlace());
         return super.updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2);
     }
 
+    @Override
     public void tick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
         if (isFree(serverLevel.getBlockState(blockPos.below())) && blockPos.getY() >= serverLevel.getMinBuildHeight()) {
             FallingBlockEntity fallingBlockEntity = FallingBlockEntity.fall(serverLevel, blockPos, blockState);
@@ -49,6 +53,7 @@ public class FallingSlab extends SlabBlock implements Fallable {
         return blockState.isAir() || blockState.is(BlockTags.FIRE) || blockState.liquid() || blockState.canBeReplaced();
     }
 
+    @Override
     public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
         if (randomSource.nextInt(16) == 0) {
             BlockPos blockPos2 = blockPos.below();

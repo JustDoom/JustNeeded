@@ -1,4 +1,4 @@
-package com.imjustdoom.justneeded.item.food;
+package com.imjustdoom.justneeded.item.custom.food;
 
 import com.imjustdoom.justneeded.JustNeeded;
 import net.minecraft.world.food.FoodProperties;
