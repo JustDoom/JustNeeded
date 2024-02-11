@@ -27,7 +27,7 @@ public abstract class CropTrampleMixin extends Block {
     @Inject(at = @At("HEAD"), method = "fallOn", cancellable = true)
     public void onLandUpon(Level world, BlockState state, BlockPos pos, Entity entity, float fallDistance, CallbackInfo ci) {
 
-        if(entity instanceof Player && ((Player) entity).isCreative()) {
+        if(entity instanceof Player player && player.isCreative()) {
             ci.cancel();
             return;
         }

@@ -2,9 +2,6 @@ package com.imjustdoom.justneeded;
 
 import com.imjustdoom.justneeded.block.ModBlocks;
 import com.imjustdoom.justneeded.item.ModItems;
-import com.imjustdoom.justneeded.util.ModLootTableModifiers;
-import dev.architectury.event.EventResult;
-import dev.architectury.event.events.common.EntityEvent;
 import dev.architectury.event.events.common.LightningEvent;
 import dev.architectury.event.events.common.LootEvent;
 import dev.architectury.registry.CreativeTabRegistry;
@@ -18,7 +15,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -41,6 +37,8 @@ import java.util.List;
 public class JustNeeded {
     public static final String MOD_ID = "justneeded";
 
+    public static final ResourceLocation JUNGLE_TEMPLE_DISPENSER = new ResourceLocation("minecraft", "chests/jungle_temple_dispenser");
+
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(MOD_ID, Registries.CREATIVE_MODE_TAB);
 
     public static final RegistrySupplier<CreativeModeTab> JUSTNEEDED_TAB = TABS.register(
@@ -50,8 +48,6 @@ public class JustNeeded {
                     () -> new ItemStack(ModItems.COOKED_EGG.get())
             )
     );
-
-    public static final ResourceLocation JUNGLE_TEMPLE_DISPENSER = new ResourceLocation("minecraft", "chests/jungle_temple_dispenser");
 
     public static void init() {
         TABS.register();
