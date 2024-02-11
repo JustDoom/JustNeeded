@@ -3,6 +3,8 @@ package com.imjustdoom.justneeded;
 import com.imjustdoom.justneeded.block.ModBlocks;
 import com.imjustdoom.justneeded.item.ModItems;
 import com.imjustdoom.justneeded.util.ModLootTableModifiers;
+import dev.architectury.event.EventResult;
+import dev.architectury.event.events.common.EntityEvent;
 import dev.architectury.event.events.common.LightningEvent;
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
@@ -14,6 +16,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -80,6 +83,16 @@ public class JustNeeded {
                 level.setBlock(blockPos, Blocks.RED_STAINED_GLASS.defaultBlockState(), 3);
             }
         });
+
+//        EntityEvent.ADD.register((Entity entity, Level world) -> {
+//            if (entity.position().y > 50) {
+//                return EventResult.pass();
+//            }
+//
+//            entity.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.DIAMOND_PICKAXE));
+//
+//            return EventResult.pass();
+//        });
     }
 
     // TODO: Add blocks/items to tags
