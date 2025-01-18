@@ -1,9 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.imjustdoom.justneeded.forge.mixin",
+  "package": "com.imjustdoom.justneeded.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "CropTrampleMixin",
+    "GhastDeathMixin",
+    "LightningStrikeMixin",
     "FireBlockInvoker"
   ],
   "injectors": {

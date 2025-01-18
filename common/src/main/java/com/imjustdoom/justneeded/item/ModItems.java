@@ -1,26 +1,35 @@
 package com.imjustdoom.justneeded.item;
 
-import com.imjustdoom.justneeded.JustNeeded;
-import com.imjustdoom.justneeded.item.custom.food.CookedEgg;
-import com.imjustdoom.justneeded.item.custom.food.PumpkinSoup;
-import dev.architectury.registry.registries.DeferredRegister;
-import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.core.registries.Registries;
+import com.imjustdoom.justneeded.platform.RegistryWrapper;
+import com.imjustdoom.justneeded.platform.Services;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.Item;
+
+import java.util.function.Supplier;
 
 public class ModItems {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(JustNeeded.MOD_ID, Registries.ITEM);
-
     //Food Items
-    public static final RegistrySupplier<CookedEgg> COOKED_EGG = ITEMS.register("cooked_egg", CookedEgg::new);
-    public static final RegistrySupplier<PumpkinSoup> PUMPKIN_SOUP = ITEMS.register("pumpkin_soup", PumpkinSoup::new);
+    public static final RegistryWrapper<Item> COOKED_EGG = register("cooked_egg", () -> new CustomItem(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(5)
+                    .build())));
+    public static final RegistryWrapper<Item> PUMPKIN_SOUP = register("pumpkin_soup", () -> new BowlFoodItem(new Item.Properties()
+            .stacksTo(1)
+            .food(new FoodProperties.Builder()
+                    .nutrition(6)
+                    .saturationMod(0.6f)
+                    .build())));
 
     // Items
-    public static final RegistrySupplier<Item> STICK_BUNDLE = ITEMS.register("stick_bundle", () -> new Item(new Item.Properties().arch$tab(JustNeeded.JUSTNEEDED_TAB)));
-    public static final RegistrySupplier<Item> BLAZE_ROD_BUNDLE = ITEMS.register("blaze_rod_bundle", () -> new Item(new Item.Properties().arch$tab(JustNeeded.JUSTNEEDED_TAB)));
+    public static final RegistryWrapper<Item> STICK_BUNDLE = register("stick_bundle", () -> new Item(new Item.Properties()));
+    public static final RegistryWrapper<Item> BLAZE_ROD_BUNDLE = register("blaze_rod_bundle", () -> new Item(new Item.Properties()));
 
-    public static void init() {
-        ITEMS.register();
+    public static RegistryWrapper<Item> register(String id, Supplier<Item> item) {
+        return Services.PLATFORM.registerItem(id, item);
     }
+
+    public static void init() {}
 }

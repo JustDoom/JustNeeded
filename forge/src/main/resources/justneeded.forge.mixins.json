@@ -1,11 +1,9 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.imjustdoom.justneeded.mixin",
+  "package": "com.imjustdoom.justneeded.forge.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "CropTrampleMixin",
-    "GhastDeathMixin"
   ],
   "injectors": {
     "defaultRequire": 1

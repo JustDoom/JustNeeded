@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "id": "justneeded",
   "version": "${version}",
-  "name": "Just Needed",
-  "description": "This mod adds items, blocks, recipes that are \"just needed\" to be in minecraft!",
+  "name": "${mod_name}",
+  "description": "${description}",
   "authors": [
-    "JustDoom"
+    "${mod_author}"
   ],
   "contact": {
     "sources": "https://github.com/JustDoom/JustNeeded"
   },
   "license": "GPLv3",
-  "icon": "assets/justneeded/logo-fabric.png",
+  "icon": "assets/justneeded/${mod_id}.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -19,11 +19,12 @@
     ]
   },
   "mixins": [
-    "justneeded-common.mixins.json"
+    "${mod_id}.mixins.json"
   ],
   "depends": {
+    "fabricloader": ">=0.15",
     "fabric": "*",
-    "minecraft": ">=1.20.1",
-    "architectury": ">=9.1.12"
+    "minecraft": "${minecraft_version}",
+    "java": ">=17"
   }
 }
