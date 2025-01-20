@@ -36,14 +36,16 @@ public class JustNeeded {
     public static void init(CreativeModeTab tab) {
         JUSTNEEDED_TAB = tab;
 
+        registerFuel();
+    }
+
+    public static void clientInit() {
         registerBlockColours((blockState, blockAndTintGetter, blockPos, i) -> {
             if (blockAndTintGetter == null || blockPos == null) {
                 return GrassColor.getDefaultColor();
             }
             return BiomeColors.getAverageGrassColor(blockAndTintGetter, blockPos);
         }, ModBlocks.GRASS_SLAB.get(), ModBlocks.GRASS_STAIRS.get());
-
-        registerFuel();
     }
 
     private static void registerBlockColours(BlockColor color, Block... blocks) {

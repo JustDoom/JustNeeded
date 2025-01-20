@@ -37,11 +37,6 @@ public class FabricPlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public void registerFuel(ItemLike item, int value) {
-        FuelRegistry.INSTANCE.add(item, value);
-    }
-
-    @Override
     public void registerFuel(int value, ItemLike item) {
         FuelRegistry.INSTANCE.add(item, value);
     }

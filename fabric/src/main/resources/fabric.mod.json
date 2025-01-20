@@ -16,6 +16,12 @@
   "entrypoints": {
     "main": [
       "com.imjustdoom.justneeded.fabric.JustNeededFabric"
+    ],
+    "client": [
+      "com.imjustdoom.justneeded.fabric.JustNeededClientFabric"
+    ],
+    "fabric-datagen": [
+      "com.imjustdoom.justneeded.datagen.ModDataGenerator"
     ]
   },
   "mixins": [

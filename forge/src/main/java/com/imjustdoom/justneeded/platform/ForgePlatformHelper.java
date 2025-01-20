@@ -62,11 +62,6 @@ public class ForgePlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public void registerFuel(ItemLike item, int value) {
-        FUEL_ITEMS.put(item, value);
-    }
-
-    @Override
     public void registerFuel(int value, ItemLike item) {
         FUEL_ITEMS.put(item, value);
     }

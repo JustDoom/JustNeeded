@@ -5,6 +5,8 @@ import com.imjustdoom.justneeded.platform.Services;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 
 import java.util.function.Supplier;
 

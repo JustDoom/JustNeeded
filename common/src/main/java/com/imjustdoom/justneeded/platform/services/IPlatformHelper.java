@@ -40,11 +40,9 @@ public interface IPlatformHelper {
      * @return The name of the environment type.
      */
     default String getEnvironmentName() {
-
         return isDevelopmentEnvironment() ? "development" : "production";
     }
 
-    void registerFuel(ItemLike item, int value);
     void registerFuel(int value, ItemLike item);
 
     RegistryWrapper<Item> registerItem(String id, Supplier<Item> item);

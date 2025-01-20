@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootDataManager;
 import net.minecraft.world.level.storage.loot.LootTable;
 
@@ -33,7 +34,7 @@ public class JustNeededFabric implements ModInitializer {
                             .forEach(entries::accept);
                 })
                 .build();
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(JustNeeded.MOD_ID, "villagerinabucket_tab"), tab);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(JustNeeded.MOD_ID, "chemickles_tab"), tab);
 
         JustNeeded.init(tab);
 

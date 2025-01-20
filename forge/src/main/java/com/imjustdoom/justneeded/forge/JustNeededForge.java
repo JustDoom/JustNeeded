@@ -28,6 +28,7 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -39,7 +40,6 @@ public class JustNeededForge {
     private static final List<ForgeWrapper<Item>> REGISTERED_ITEMS = new ArrayList<>();
 
     public JustNeededForge() {
-
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         modBus.addListener((FMLCommonSetupEvent e) -> {
             FireBlockInvoker invoker = ((FireBlockInvoker) Blocks.FIRE);
@@ -80,6 +80,9 @@ public class JustNeededForge {
             invoker.invokeSetFlammable(ModBlocks.GREEN_WOOL_SLAB.get(), 30, 60);
             invoker.invokeSetFlammable(ModBlocks.RED_SAND_SLAB.get(), 30, 60);
             invoker.invokeSetFlammable(ModBlocks.BLACK_WOOL_SLAB.get(), 30, 60);
+        });
+        modBus.addListener((FMLClientSetupEvent event) -> {
+            JustNeeded.clientInit();
         });
 
         CreativeModeTab tab = CreativeModeTab.builder()

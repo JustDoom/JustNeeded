@@ -91,7 +91,7 @@ tasks.named("sourcesJar", Jar) {
 }
 
 processResources {
-    from project(":common").sourceSets.main.resources
+    from project(":common").sourceSets.main.resources.srcDir("src/main/generated")
 }
 
 jar.finalizedBy('reobfJar')
